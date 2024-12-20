@@ -32,9 +32,19 @@ Desde que descubrí **ROS (Robot Operating System)**, me he sumergido en proyect
 
 ### 📈 Gráfico de Actividad
 <div align="center">
-  
-![Gráfico de actividad](https://github-readme-activity-graph.cyclic.app/graph?username=NoxiousCape&theme=github)
 
+[![Actividad](https://github-readme-activity-graph.cyclic.app/graph?username=NoxiousCape&theme=react-dark&bg_color=20232a&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
+
+</div>
+
+### 🛠️ Habilidades y Tecnologías
+<div align="center">
+  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
+  <img src="https://img.shields.io/badge/-ROS-22314E?style=flat-square&logo=ros&logoColor=white" />
+  <img src="https://img.shields.io/badge/-GeoServer-4285F4?style=flat-square&logo=geoserver&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/-SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
 </div>
 
 ### 🌐 Contacto
