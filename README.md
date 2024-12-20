@@ -33,7 +33,7 @@ Desde que descubrí **ROS (Robot Operating System)**, me he sumergido en proyect
 ### 📈 Gráfico de Actividad
 <div align="center">
 
-[![Actividad](https://github-readme-activity-graph.cyclic.app/graph?username=NoxiousCape&theme=react-dark&bg_color=20232a&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
+[![Actividad](https://github-readme-activity-graph.vercel.app/graph?username=NoxiousCape&theme=react-dark&bg_color=20232a&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
 
 </div>
 
