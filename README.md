@@ -13,12 +13,16 @@ Desde que descubrí **ROS (Robot Operating System)**, me he sumergido en proyect
 
 ### 🛠️ Habilidades y Tecnologías
 - **Lenguajes de programación**:
+  
   - ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
   - ![C++](https://img.shields.io/badge/C++-17-green?logo=cplusplus)
   - ![SQL](https://img.shields.io/badge/SQL-StructuredQueryLanguage-yellow?logo=postgresql)
+    
 - **Herramientas y Frameworks**:
+  
   - ![ROS](https://img.shields.io/badge/ROS-Noetic-blue?logo=ros)
   - ![GeoServer](https://img.shields.io/badge/GeoServer-2.18-green?logo=geoserver)
+    
 - **Otros intereses**: ![Fotografía](https://img.shields.io/badge/Fotografía-Pasión-ff69b4?logo=camera) y ![Senderismo](https://img.shields.io/badge/Senderismo-Pasión-forestgreen?logo=tree).
 
 ### 📊 Estadísticas de GitHub
