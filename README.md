@@ -1,4 +1,4 @@
-# ¡Hola! 👋 Soy [Tu Nombre]
+# ¡Hola! 👋 Soy [Daniel Páez]
 
 ### 🚀 Sobre mí
 - 🎓 **Estudiante de Ingeniería de Sistemas** en [UPTC](https://www.uptc.edu.co/) (Futuro grado en 2025).
