@@ -24,9 +24,7 @@ Desde que descubrí **ROS (Robot Operating System)**, me he sumergido en proyect
 ### 📊 Estadísticas de GitHub
 <div align="center">
   
-![Estadísticas de GitHub](https://github-readme-stats.vercel.app/api?username=NoxiousCape&show_icons=true&theme=radical&locale=es)
 
-![Lenguajes más usados](https://github-readme-stats.vercel.app/api/top-langs/?username=NoxiousCape&layout=compact&theme=radical&locale=es)
 
 </div>
 
