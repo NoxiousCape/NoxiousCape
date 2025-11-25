@@ -1,7 +1,7 @@
 # ¡Hola! 👋 Soy Daniel Páez
 
 ### 🚀 Sobre mí
-- 🎓 **Ingeniero de Sistemas (casi graduado)** de la UPTC — sustentación en 2025 con calificación meritoria (4.6/5.0).
+- 🎓 **Ingeniero de Sistemas** de la UPTC — sustentación en 2025 con calificación meritoria (4.6/5.0).
 - 🤖 Apasionado por la **robótica, ROS y la integración hardware–software**.
 - 🛰️ Interesado en **fotogrametría, SIG, drones y procesamiento de nubes de puntos**.
 - 🧠 Admirador del aprendizaje constante: disfruto enseñar, aprender con videos, documentación y proyectos reales.
