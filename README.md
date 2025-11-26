@@ -31,6 +31,7 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 <!-- =======================
         LENGUAJES
 =========================== -->
+
 ### 🔤 Lenguajes de Programación  
 ![Python](https://skillicons.dev/icons?i=python)
 ![C++](https://skillicons.dev/icons?i=cpp)
@@ -43,8 +44,9 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 <br>
 
 <!-- =======================
-        ROBÓTICA / IA
+   ROBÓTICA / AUTOMATIZACIÓN
 =========================== -->
+
 ### 🤖 Robótica, Automatización & IA  
 ![ROS](https://skillicons.dev/icons?i=ros)
 ![Linux](https://skillicons.dev/icons?i=linux)
@@ -58,18 +60,19 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 <!-- =======================
        GEOESPACIAL / 3D
 =========================== -->
+
 ### 🗺️ GIS, 3D y Fotogrametría  
 <img src="https://img.shields.io/badge/GeoServer-2.18-green?logo=geoserver&style=for-the-badge" height="35">
 <img src="https://img.shields.io/badge/QGIS-3.x-brightgreen?logo=qgis&style=for-the-badge" height="35">
 <img src="https://img.shields.io/badge/CloudCompare-3D-blue?style=for-the-badge" height="35">
-<img src="https://img.shields.io/badge/Agisoft-Metashape-1f6feb?style=for-the-badge" height="35">
-<img src="https://img.shields.io/badge/PDAL-PointCloud-orange?style=for-the-badge" height="35">
+<img src="https://img.shields.io/badge/Quick Terrain Modeler-3D Analysis-orange?style=for-the-badge" height="35">
 
 <br>
 
 <!-- =======================
        DESARROLLO MÓVIL
 =========================== -->
+
 ### 📱 Desarrollo Móvil  
 ![Android Studio](https://skillicons.dev/icons?i=androidstudio)
 ![Kotlin](https://skillicons.dev/icons?i=kotlin)
@@ -80,6 +83,7 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 <!-- =======================
        DESARROLLO DE JUEGOS
 =========================== -->
+
 ### 🎮 Motores y Entornos 3D  
 ![Unity](https://skillicons.dev/icons?i=unity)
 ![Blender](https://skillicons.dev/icons?i=blender)
@@ -87,8 +91,9 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 <br>
 
 <!-- =======================
-     BACKEND / SERVIDORES
+     FULLSTACK / BACKEND
 =========================== -->
+
 ### 🧩 Backend & Frameworks  
 ![NodeJS](https://skillicons.dev/icons?i=nodejs)
 ![NestJS](https://skillicons.dev/icons?i=nestjs)
@@ -99,8 +104,9 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 <br>
 
 <!-- =======================
-  CONTROL DE VERSIONES / DEVOPS
+     CONTROL DE VERSIONES
 =========================== -->
+
 ### 🔧 Control de Versiones & DevOps  
 ![Git](https://skillicons.dev/icons?i=git)
 ![GitHub](https://skillicons.dev/icons?i=github)
@@ -112,25 +118,16 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 <br>
 
 <!-- =======================
-           OTROS
+         HOBBIES
 =========================== -->
-### 📚 Otros  
-![Markdown](https://skillicons.dev/icons?i=markdown)
-![Latex](https://skillicons.dev/icons?i=latex)
-![Vscode](https://skillicons.dev/icons?i=vscode)
 
-<br>
-
----
-
-## 🎨 Hobbies & Pasiones
-
-### 🌄 Hobbies  
-![Fotografía](https://img.shields.io/badge/Fotografía-Pasión-ff69b4?logo=camera&style=for-the-badge)
-![Senderismo](https://img.shields.io/badge/Senderismo-Montañas-2b9348?logo=tree&style=for-the-badge)
-<img src="https://img.shields.io/badge/SkyscraperCity-Urbanismo-1f6feb?style=for-the-badge&logo=city" height="35">
+### 🌱 Hobbies  
+<img src="https://img.shields.io/badge/Fotografía-Pasión-ff69b4?style=for-the-badge&logo=camera" height="35">
+<img src="https://img.shields.io/badge/Senderismo-Aventura-2e8b57?style=for-the-badge&logo=tree" height="35">
+<img src="https://img.shields.io/badge/SkyscraperCity-Urbanismo-blue?style=for-the-badge&logo=city" height="35">
 
 </div>
+
 
 ---
 
