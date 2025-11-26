@@ -46,7 +46,10 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 ### 📊 Estadísticas de GitHub
 <div align="center">
   
-![Estadísticas de GitHub](https://metrics.lecoq.io/NoxiousCape?template=classic&languages=1&isocalendar=1)
+![Estadísticas de GitHub]
+![](https://raw.githubusercontent.com/NoxiousCape/NoxiousCape/master/profile-summary-card-output/default/1-repos-per-language.svg)
+![](https://raw.githubusercontent.com/NoxiousCape/NoxiousCape/master/profile-summary-card-output/default/2-most-commit-language.svg)
+
 
 
 ![Lenguajes más usados](https://github-readme-stats.vercel.app/api/top-langs/?username=NoxiousCape&layout=compact&theme=radical&locale=es)
