@@ -144,7 +144,7 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 ### 📈 Gráfico de Actividad
 <div align="center">
 
-[![Actividad](https://github-readme-activity-graph.vercel.app/graph?username=NoxiousCape&theme=react-dark&bg_color=20232a&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
+[![Actividad](https://github-readme-activity-graph.vercel.app/graph?username=NoxiousCape&theme=react-dark&bg_color=20232a&hide_border=true)]
 
 </div>
 
