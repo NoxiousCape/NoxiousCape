@@ -26,20 +26,111 @@ Me gusta combinar **sensores, algoritmos y automatización** para crear solucion
 
 ### 🛠️ Habilidades y Tecnologías
 
-#### **Lenguajes**
-- ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
-- ![C++](https://img.shields.io/badge/C++-17-green?logo=cplusplus)
-- ![SQL](https://img.shields.io/badge/SQL-PostgreSQL-blue?logo=postgresql)
+<div align="center">
 
-#### **Frameworks & Herramientas**
-- ![ROS](https://img.shields.io/badge/ROS-Noetic-blue?logo=ros)
-- ![GeoServer](https://img.shields.io/badge/GeoServer-2.18-green?logo=geoserver)
-- ![Linux](https://img.shields.io/badge/Linux-Ubuntu-orange?logo=ubuntu)
-- ![Git](https://img.shields.io/badge/Git-Expert-orange?logo=git)
+<!-- =======================
+        LENGUAJES
+=========================== -->
+### 🔤 Lenguajes de Programación  
+![Python](https://skillicons.dev/icons?i=python)
+![C++](https://skillicons.dev/icons?i=cpp)
+![C#](https://skillicons.dev/icons?i=cs)
+![Java](https://skillicons.dev/icons?i=java)
+![Kotlin](https://skillicons.dev/icons?i=kotlin)
+![Ruby](https://skillicons.dev/icons?i=ruby)
+![PostgreSQL](https://skillicons.dev/icons?i=postgres)
 
-#### **Otros intereses**
-- ![Fotografía](https://img.shields.io/badge/Fotografía-Pasión-ff69b4?logo=camera)
-- ![Senderismo](https://img.shields.io/badge/Senderismo-Pasión-forestgreen?logo=tree)
+<br>
+
+<!-- =======================
+        ROBÓTICA / IA
+=========================== -->
+### 🤖 Robótica, Automatización & IA  
+![ROS](https://skillicons.dev/icons?i=ros)
+![Linux](https://skillicons.dev/icons?i=linux)
+![Bash](https://skillicons.dev/icons?i=bash)
+![Docker](https://skillicons.dev/icons?i=docker)
+![PyTorch](https://skillicons.dev/icons?i=pytorch)
+![TensorFlow](https://skillicons.dev/icons?i=tensorflow)
+
+<br>
+
+<!-- =======================
+       GEOESPACIAL / 3D
+=========================== -->
+### 🗺️ GIS, 3D y Fotogrametría  
+<img src="https://img.shields.io/badge/GeoServer-2.18-green?logo=geoserver&style=for-the-badge" height="35">
+<img src="https://img.shields.io/badge/QGIS-3.x-brightgreen?logo=qgis&style=for-the-badge" height="35">
+<img src="https://img.shields.io/badge/CloudCompare-3D-blue?style=for-the-badge" height="35">
+<img src="https://img.shields.io/badge/Agisoft-Metashape-1f6feb?style=for-the-badge" height="35">
+<img src="https://img.shields.io/badge/PDAL-PointCloud-orange?style=for-the-badge" height="35">
+
+<br>
+
+<!-- =======================
+       DESARROLLO MÓVIL
+=========================== -->
+### 📱 Desarrollo Móvil  
+![Android Studio](https://skillicons.dev/icons?i=androidstudio)
+![Kotlin](https://skillicons.dev/icons?i=kotlin)
+![Java](https://skillicons.dev/icons?i=java)
+
+<br>
+
+<!-- =======================
+       DESARROLLO DE JUEGOS
+=========================== -->
+### 🎮 Motores y Entornos 3D  
+![Unity](https://skillicons.dev/icons?i=unity)
+![Blender](https://skillicons.dev/icons?i=blender)
+
+<br>
+
+<!-- =======================
+     BACKEND / SERVIDORES
+=========================== -->
+### 🧩 Backend & Frameworks  
+![NodeJS](https://skillicons.dev/icons?i=nodejs)
+![NestJS](https://skillicons.dev/icons?i=nestjs)
+![Express](https://skillicons.dev/icons?i=express)
+![GraphQL](https://skillicons.dev/icons?i=graphql)
+![Nginx](https://skillicons.dev/icons?i=nginx)
+
+<br>
+
+<!-- =======================
+  CONTROL DE VERSIONES / DEVOPS
+=========================== -->
+### 🔧 Control de Versiones & DevOps  
+![Git](https://skillicons.dev/icons?i=git)
+![GitHub](https://skillicons.dev/icons?i=github)
+![GitLab](https://skillicons.dev/icons?i=gitlab)
+![Docker](https://skillicons.dev/icons?i=docker)
+![AWS](https://skillicons.dev/icons?i=aws)
+![Linux](https://skillicons.dev/icons?i=linux)
+
+<br>
+
+<!-- =======================
+           OTROS
+=========================== -->
+### 📚 Otros  
+![Markdown](https://skillicons.dev/icons?i=markdown)
+![Latex](https://skillicons.dev/icons?i=latex)
+![Vscode](https://skillicons.dev/icons?i=vscode)
+
+<br>
+
+---
+
+## 🎨 Hobbies & Pasiones
+
+### 🌄 Hobbies  
+![Fotografía](https://img.shields.io/badge/Fotografía-Pasión-ff69b4?logo=camera&style=for-the-badge)
+![Senderismo](https://img.shields.io/badge/Senderismo-Montañas-2b9348?logo=tree&style=for-the-badge)
+<img src="https://img.shields.io/badge/SkyscraperCity-Urbanismo-1f6feb?style=for-the-badge&logo=city" height="35">
+
+</div>
 
 ---
 
