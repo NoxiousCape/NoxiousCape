@@ -94,7 +94,7 @@ Plataforma completa de gestión bibliotecaria con:
 
 </details>
 
-<details>
+<details open>
 <summary><b>🗺️ Geoespacial & Análisis 3D</b></summary>
 <br>
 
@@ -109,7 +109,7 @@ Plataforma completa de gestión bibliotecaria con:
 
 </details>
 
-<details>
+<details open>
 <summary><b>🌐 Desarrollo Full Stack</b></summary>
 <br>
 
@@ -130,7 +130,7 @@ Plataforma completa de gestión bibliotecaria con:
 
 </details>
 
-<details>
+<details open>
 <summary><b>📱 Desarrollo Móvil & Otros</b></summary>
 <br>
 
