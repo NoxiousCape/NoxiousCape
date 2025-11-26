@@ -5,7 +5,7 @@
 - 🤖 Apasionado por la **robótica, ROS y la integración hardware–software**.
 - 🛰️ Interesado en **fotogrametría, SIG, drones y procesamiento de nubes de puntos**.
 - 🧠 Admirador del aprendizaje constante: disfruto enseñar, aprender con videos, documentación y proyectos reales.
-- 🌍 Sueño con trabajar **de manera remota**, viajar y usar la tecnología para mejorar la vida de las personas y los animales.
+- 🌍 Sueño con viajar por todo el mundo y usar la tecnología para mejorar la vida de las personas y los animales.
 
 ### 💻 En qué me enfoco actualmente
 Me gusta combinar **sensores, algoritmos y automatización** para crear soluciones reales. He trabajado con:
