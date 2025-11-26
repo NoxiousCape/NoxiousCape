@@ -94,7 +94,7 @@ Plataforma completa de gestión bibliotecaria con:
 
 </details>
 
-<details open>
+<details>
 <summary><b>🗺️ Geoespacial & Análisis 3D</b></summary>
 <br>
 
