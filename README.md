@@ -156,7 +156,7 @@ Plataforma completa de gestión bibliotecaria con:
 
 ![Lenguajes más usados](https://github-readme-stats.vercel.app/api/top-langs/?username=NoxiousCape&layout=compact&theme=radical&locale=es)
 
-[![Actividad](https://github-readme-activity-graph.vercel.app/graph?username=NoxiousCape&theme=react-dark&bg_color=20232a&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
+[![Actividad](https://github-readme-activity-graph.vercel.app/graph?username=NoxiousCape)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 </div>
 
