@@ -46,6 +46,19 @@
 
 ## 🚀 Proyectos Destacados
 
+### ✈️ [M&D Travels - Agencia de Viajes & IA](https://mydtravels.vercel.app/)
+> **Plataforma web turística con Asistente de Presupuesto potenciado por IA**
+
+Solución full stack moderna desplegada en arquitectura Serverless:
+- 🤖 **IA Integrada**: Recomendador de viajes personalizado utilizando **Google Gemini API**.
+- ⚡ **Arquitectura Serverless**: Backend optimizado en Vercel Functions (Node.js/Express).
+- 🎨 **UX/UI Moderno**: Diseño Glassmorphism, menú móvil tipo 'App Drawer' y animaciones fluidas.
+- 🛡️ **Seguridad & Contacto**: Protección con Google reCAPTCHA v3 e emails transaccionales vía Resend.
+
+**Stack:** `JavaScript` `Node.js` `Gemini AI` `Vercel` `CSS3`
+
+---
+
 ### 🎮 [Laberinto - Unity Game](https://github.com/NoxiousCape/Laberinto)
 > **Juego 3D desarrollado en Unity con C#**
 
