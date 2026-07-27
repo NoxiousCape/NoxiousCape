@@ -109,6 +109,8 @@ Highlights:
 
 ## 🛍 Dupe Perfumes *(In Development)*
 
+🔗 https://dupe-perfumes.vercel.app/
+
 E-commerce platform currently under development.
 
 Highlights:
