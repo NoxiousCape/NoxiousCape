@@ -130,7 +130,20 @@ Currently working as:
 * ✈ Software Engineer & Co-Founder at **M&D Travels Colombia**
 * 🎮 Unity Programming Instructor at **Kodland**
 
-Most of the software I develop is maintained in **private repositories** due to commercial confidentiality agreements with clients and companies.
+## 🔒 Commercial Projects
+
+Many of my recent projects are developed under commercial contracts or internal company initiatives.
+
+Although their source code cannot be shared publicly, I can discuss:
+
+- Software architecture
+- Design decisions
+- Technologies used
+- Development process
+- Challenges solved
+- Results achieved
+
+upon request during technical interviews.
 
 ---
 
