@@ -333,23 +333,21 @@ I enjoy learning new technologies by **building actual products and solving conc
 * 🧩 System integrations and developer tooling
 
 ---
-
 # 📈 GitHub Statistics
 
 <p align="center">
   <img
-    src="./profile/stats.svg"
+    src="https://github-readme-stats.vercel.app/api?username=NoxiousCape&show_icons=true&hide_border=true&rank_icon=github"
     alt="NoxiousCape GitHub Statistics"
+    height="180"
   />
-</p>
 
-<p align="center">
   <img
-    src="./profile/top-langs.svg"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=NoxiousCape&layout=compact&hide_border=true"
     alt="Most Used Languages"
+    height="180"
   />
 </p>
-
 ---
 
 # 🔥 GitHub Streak
