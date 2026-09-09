@@ -334,13 +334,32 @@ I enjoy learning new technologies by **building actual products and solving conc
 
 ---
 
-## 📊 GitHub
+# 📈 GitHub Statistics
 
-<div align="center">
+<p align="center">
+  <img
+    src="./profile/stats.svg"
+    alt="NoxiousCape GitHub Statistics"
+  />
+</p>
 
-![Daniel's GitHub stats](https://github-readme-stats.vercel.app/api?username=NoxiousCape\&show_icons=true\&hide_border=true\&rank_icon=github)
+<p align="center">
+  <img
+    src="./profile/top-langs.svg"
+    alt="Most Used Languages"
+  />
+</p>
 
-</div>
+---
+
+# 🔥 GitHub Streak
+
+<p align="center">
+  <img
+    src="https://streak-stats.demolab.com?user=NoxiousCape&theme=tokyonight-duo&hide_border=true"
+    alt="GitHub Streak"
+  />
+</p>
 
 ---
 
