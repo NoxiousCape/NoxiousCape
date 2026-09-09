@@ -16,14 +16,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate GitHub Stats
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&rank_icon=github
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Generate Top Languages
         uses: stats-organization/github-readme-stats-action@v2
         with:
