@@ -337,12 +337,6 @@ I enjoy learning new technologies by **building actual products and solving conc
 
 <p align="center">
   <img
-    src="./profile/stats.svg"
-    alt="NoxiousCape GitHub Statistics"
-    height="180"
-  />
-
-  <img
     src="./profile/top-langs.svg"
     alt="Most Used Languages"
     height="180"
