@@ -335,8 +335,6 @@ I enjoy learning new technologies by **building actual products and solving conc
 ---
 # 📈 GitHub Statistics
 
-# 📈 GitHub Statistics
-
 <p align="center">
   <img
     src="./profile/stats.svg"
