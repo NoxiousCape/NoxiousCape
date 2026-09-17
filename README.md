@@ -4,11 +4,21 @@
 
 ### **Software Engineer · Full Stack Developer · AI & Automation**
 
-I design and build software products, web applications, desktop tools, and automated solutions focused on solving real-world problems.
+I build software that turns **complex business processes into practical, reliable tools**.
 
-[![GitHub](https://img.shields.io/badge/GitHub-NoxiousCape-181717?style=for-the-badge\&logo=github)](https://github.com/NoxiousCape)
-[![Portfolio](https://img.shields.io/badge/Portfolio-M%26D%20Travels-0A66C2?style=for-the-badge)](https://mydtravels.vercel.app/)
-[![Email](https://img.shields.io/badge/Email-danielpaezzamudio0@hotmail.com-0078D4?style=for-the-badge\&logo=microsoft-outlook)](mailto:danielpaezzamudio0@hotmail.com)
+From full-stack web platforms and data-intensive systems to desktop applications, automation and AI-powered solutions, I enjoy working on software that solves **real problems in real environments**.
+
+<p>
+  <a href="https://github.com/NoxiousCape">
+    <img src="https://img.shields.io/badge/GitHub-NoxiousCape-181717?style=for-the-badge&logo=github" alt="GitHub">
+  </a>
+  <a href="https://mydtravels.vercel.app/">
+    <img src="https://img.shields.io/badge/Portfolio-M%26D%20Travels-0A66C2?style=for-the-badge" alt="Portfolio">
+  </a>
+  <a href="mailto:danielpaezzamudio0@hotmail.com">
+    <img src="https://img.shields.io/badge/Email-danielpaezzamudio0@hotmail.com-0078D4?style=for-the-badge&logo=microsoft-outlook" alt="Email">
+  </a>
+</p>
 
 </div>
 
@@ -16,117 +26,160 @@ I design and build software products, web applications, desktop tools, and autom
 
 ## 👨‍💻 About Me
 
-I'm a **Systems and Computing Engineer** who enjoys turning ideas and business requirements into reliable software.
+I'm a **Systems and Computing Engineer** focused on building software products, internal tools and automated solutions.
 
-My work spans the development process — from understanding requirements and designing solutions to implementing, integrating, deploying, and maintaining applications in real environments.
+My work covers the complete development process — from understanding a business requirement and designing the solution to implementation, integration, deployment and maintenance in production environments.
 
-I currently focus on:
+I currently work across:
 
 * 🌐 **Full Stack Web Development**
 * 🖥️ **Desktop Applications**
-* 🤖 **Artificial Intelligence & AI-powered solutions**
+* 🤖 **Artificial Intelligence & LLM-powered solutions**
 * ⚙️ **Automation & Process Optimization**
 * 🔌 **API Design & System Integrations**
-* 📊 **Data-driven Applications**
+* 📊 **Data Processing & Data-driven Applications**
+* ☁️ **Cloud Deployment & Production Infrastructure**
 
-I particularly enjoy projects where **software engineering, automation, and real business needs intersect**.
+I particularly enjoy projects where **software engineering meets real operational problems** — especially when a repetitive, complex or manual process can be transformed into a reliable piece of software.
 
 ---
 
-## 🚀 Featured Projects
+# 🚀 Selected Work
 
-### ⚖️ ASOBANCARIA — Judicial & Legislative Management Platform
+A growing part of my portfolio comes from **professional and commercial projects**.
+
+Some of these projects are private or confidential, but I can still showcase the engineering challenges, architecture and technologies involved.
+
+---
+
+## ⚖️ Central de Consultas La Manuelina
 
 **Private project · La Manuelina S.A.S. · 2026**
 
-Web platform developed for the management and consultation of legal processes and legislative information.
+A web platform designed to centralize the consultation of **judicial processes in Colombia**, integrating both the **SAMAI** system and the **Rama Judicial — Consulta Nacional Unificada**.
 
-The platform integrates authentication, structured data management, judicial process workflows, legislative project management, document handling, and production infrastructure.
+The project evolved from a dedicated SAMAI consultation tool into a broader consultation platform with individual searches, bulk processing, persistent caching, document access and offline resilience.
 
-**Built with:**
+### Built with
+
+`Node.js` · `Express` · `JavaScript` · `Playwright` · `Chromium` · `MySQL` · `ExcelJS` · `xlsx-stream-reader` · `SSE` · `CSS`
+
+### Highlights
+
+* 🔎 Search by **23-digit case number** with automatic corporation identification
+* 👤 National search by procedural party across **76 judicial corporations**
+* 🔄 Cross-jurisdiction bridge between **SAMAI and Rama Judicial**
+* 📁 Complete case and document consultation
+* 📄 Integrated PDF visualization and document downloads
+* 💾 Multi-level persistent caching
+* 📴 Offline access to previously consulted information
+* 📊 Bulk Excel processing with live progress, ETA and resumable checkpoints
+* 🔁 Automatic retry and error classification
+* 🧵 Server-Sent Events for real-time job progress
+* 🗄️ MySQL persistence in production
+* 📥 Bulk results exported to Excel and other formats
+* 🧭 Geographic search expansion for large-scale Rama Judicial queries
+* 🔐 Production-oriented architecture designed around external service availability
+
+> 🔒 Private and confidential project developed for **La Manuelina S.A.S.**
+
+---
+
+## ⚖️ ASOBANCARIA — Judicial & Legislative Management Platform
+
+**Private project · La Manuelina S.A.S. · 2026**
+
+Web platform developed for the management and consultation of **judicial processes and legislative information** for an institutional environment.
+
+The platform combines authentication, structured data management, judicial workflows, legislative project management, document handling and production infrastructure.
+
+### Built with
 
 `Next.js` · `TypeScript` · `React` · `Tailwind CSS` · `Prisma` · `MySQL` · `NextAuth.js` · `Microsoft Entra ID` · `Railway`
 
-**Highlights:**
+### Highlights
 
-* 🔐 Federated authentication with Microsoft Entra ID
-* ⚖️ Judicial process management for multiple Colombian institutions
+* 🔐 Federated authentication with **Microsoft Entra ID**
+* ⚖️ Judicial process management
 * 🏛️ Legislative project management for Senate and House of Representatives
-* 📄 Document and procedural information management
-* 🔎 Advanced filtering, pagination, and search
+* 📄 Procedural and document information management
+* 🔎 Advanced filtering, pagination and search
 * 📊 Excel-based data ingestion and normalization
-* 📑 PDF and data export functionality
-* 🗄️ Prisma-based data layer with MySQL in production
+* ✏️ CRUD workflows with logical deletion
+* 🗄️ Prisma-based data layer
 * 🚀 Production deployment on Railway
-* 🏗️ Local development architecture using SQLite without Docker
+* 🏗️ SQLite-based local development environment
+* 📱 Responsive institutional interface
 
 > 🔒 Private and confidential project developed for **La Manuelina S.A.S.**
 
 ---
 
-### 🔎 SAMAI Consulta — Judicial Process Search Platform
+## 📄 PDEx — Excel → PDF
 
-**Private project · La Manuelina S.A.S. · 2026**
+**Private project · 2026**
 
-Web platform designed to simplify the consultation of judicial processes through the **SAMAI** system, providing search, document access, PDF visualization, and persistent caching.
+A local desktop tool that transforms **dense Excel spreadsheets into structured, readable and print-ready PDFs**.
 
-The application was designed with resilience in mind, allowing previously consulted information to remain accessible when the external service becomes unavailable.
+Instead of treating an Excel file as a page to be printed directly, PDEx analyzes its structure and dynamically generates a document layout designed around readability and information preservation.
 
-**Built with:**
+### Built with
 
-`Node.js` · `Express` · `Playwright` · `Chromium` · `MySQL` · `JavaScript` · `CSS`
+`Python` · `Tkinter` · `ReportLab` · `OpenPyXL` · `PyInstaller`
 
-**Highlights:**
+### Highlights
 
-* 🔎 Search by case number or procedural party
-* 📁 Complete case and document visualization
-* 📄 Integrated PDF viewer
-* 💾 Multi-level caching strategy
-* 📴 Offline access to previously consulted information
-* 🗄️ Persistent cache using MySQL in production
-* 🌐 External service availability monitoring
-* 🔄 Automatic retries and error classification
-* 📥 Document downloads preserving original filenames
-* 🎨 Custom frontend built with CSS
+* 📊 Processes spreadsheets with hundreds of records
+* 🧠 Intelligent column and row analysis
+* 📐 Dynamic layout and column sizing
+* 📄 Generates structured PDFs from complex spreadsheets
+* 🧩 Fragmentation of very large rows across multiple pages
+* 🔢 Preserves complete source information without summarizing or truncating
+* 📝 Optional PDF covers and metadata
+* 📚 Individual-sheet or unified multi-sheet output
+* 🖥️ Distributed as a standalone `.exe`
+* ⚙️ Supports both graphical and CLI workflows
+* ✅ Automated validation of generated documents
+* 📦 Versioned corporate distribution through GitHub Releases
 
-> 🔒 Private and confidential project developed for **La Manuelina S.A.S.**
+The tool is designed to operate **100% locally**, making it suitable for workflows involving sensitive information.
+
+> 🔒 Private project developed for professional/corporate use.
 
 ---
 
-### ✈️ M&D Cotizaciones
+## ✈️ M&D Cotizaciones
 
-**Desktop application for M&D Travels Colombia**
+**Desktop application · M&D Travels Colombia**
 
-A desktop tool designed to streamline the travel quotation workflow by bringing information gathering, AI assistance, document generation, and quotation management into a single application.
+A desktop application designed to streamline the travel quotation workflow by combining information gathering, AI assistance, quotation management and document generation.
 
-**Built with:**
+### Built with
 
 `Electron` · `JavaScript` · `ExcelJS` · `LaTeX` · `OpenRouter AI` · `GitHub Releases`
 
-**Highlights:**
+### Highlights
 
-* 🤖 AI-assisted travel quotation and content generation
+* 🤖 AI-assisted quotation and content generation
 * 🌐 Embedded browser for travel platforms
 * 📊 Automated Excel quotation generation
 * 📄 Automated PDF generation with LaTeX
-* 🔄 Automatic application updates through GitHub Releases
+* 🔄 Automatic application updates
 * 🖥️ Standalone desktop application
-
-> 🔒 Private repository — developed for a commercial project.
 
 ---
 
-### 🌍 M&D Travels
+## 🌍 M&D Travels
 
-🔗 **https://mydtravels.vercel.app/**
+🔗 https://mydtravels.vercel.app/
 
 Full Stack web platform developed for **M&D Travels Colombia**, combining a corporate website with interactive functionality and AI-powered features.
 
-**Highlights:**
+### Highlights
 
 * 🌐 Full Stack architecture
 * 🤖 AI-powered travel assistant
-* 📱 Responsive and modern UI
+* 📱 Responsive interface
 * 📩 Automated contact workflows
 * 🛡️ Google reCAPTCHA integration
 * ✉️ Resend email integration
@@ -135,13 +188,13 @@ Full Stack web platform developed for **M&D Travels Colombia**, combining a corp
 
 ---
 
-### 🍰 Pastelería Deleitarte
+## 🍰 Pastelería Deleitarte
 
-🔗 **https://pasteleriadeleitarte.com/**
+🔗 https://pasteleriadeleitarte.com/
 
 Corporate website developed from scratch according to the client's requirements.
 
-**Highlights:**
+### Highlights
 
 * 🎨 Responsive UI
 * ⚙️ Full Stack development
@@ -152,13 +205,13 @@ Corporate website developed from scratch according to the client's requirements.
 
 ---
 
-### ⚡ JR Mantenimiento Eléctrico
+## ⚡ JR Mantenimiento Eléctrico
 
-🔗 **https://jrmantenimientoelectrico.com/**
+🔗 https://jrmantenimientoelectrico.com/
 
-Corporate website developed for an electrical services company, including the technical configuration required to deploy and maintain the site in production.
+Corporate website developed for an electrical services company, including the technical configuration required for production deployment and maintenance.
 
-**Highlights:**
+### Highlights
 
 * 🌐 Full website development
 * 🔗 Domain configuration
@@ -169,15 +222,13 @@ Corporate website developed for an electrical services company, including the te
 
 ---
 
-### 🛍️ Dupe Perfumes
+## 🛍️ Dupe Perfumes
 
-🔗 **https://dupe-perfumes.vercel.app/**
+🔗 https://dupe-perfumes.vercel.app/
 
-E-commerce platform currently under development.
+E-commerce platform developed around specific business requirements and a customized commerce workflow.
 
-The project focuses on building a customized commerce experience around specific business requirements.
-
-**Highlights:**
+### Highlights
 
 * 🛒 E-commerce architecture
 * ⚙️ Custom business logic
@@ -188,67 +239,68 @@ The project focuses on building a customized commerce experience around specific
 
 ---
 
-## 💼 Professional Experience
+# 💼 Professional Experience
 
-### 🏢 Full Stack Developer — La Manuelina S.A.S.
+## 🏢 Full Stack Developer — La Manuelina S.A.S.
 
 **September 2026 — Present**
 
-Developing software solutions for real-world business and institutional requirements, including web platforms, data management systems, integrations, automation, and production deployments.
+Developing software solutions for real-world business and institutional requirements.
 
-Current work includes:
+My current work includes:
 
 * 🌐 Full Stack application development
 * 🏗️ Software architecture and technical design
 * 🔐 Authentication and identity integrations
 * 🗄️ Database design and data management
 * 🔌 API integrations
-* 📊 Data ingestion and normalization
+* 📊 Data ingestion and processing
+* ⚙️ Automation and internal tools
 * 🚀 Cloud deployment and production infrastructure
-* ⚙️ Internal tools and process optimization
+* 🧩 Integration with external and institutional systems
 
-Current projects include private platforms for **judicial process management, legislative information, and judicial information consultation**.
-
----
-
-### 💻 Full Stack Developer — AXXIOMA
-
-Developing web applications, APIs, integrations, automation workflows, and software solutions for business processes.
+Current projects include platforms and tools related to **judicial information, legislative processes, data processing and business process automation**.
 
 ---
 
-### ✈️ Software Engineer & Co-Founder — M&D Travels Colombia
+## ✈️ Software Engineer & Co-Founder — M&D Travels Colombia
 
-Building the company's digital infrastructure, including web platforms, internal software, automation, and AI-assisted tools.
+Building the company's digital infrastructure, including web platforms, internal software, automation and AI-assisted tools.
 
 ---
 
-### 🎮 Unity Programming Instructor — Kodland
+## 🎮 Unity Programming Instructor — Kodland
 
 Teaching programming and game development concepts using **C# and Unity**, helping students build interactive projects while strengthening their programming fundamentals.
 
 ---
 
-## 🔒 Commercial & Confidential Work
+# 🔒 Commercial & Confidential Work
 
-Some of my work is developed for clients, companies, or private initiatives and therefore cannot be published publicly.
+Not all of my work can be published publicly.
 
-Even when the source code is private, I can discuss the engineering behind these projects, including:
+Several of the systems I develop are intended for **companies, internal operations and institutional environments**, where the source code, data and infrastructure cannot be made public.
+
+Even when a repository is private, I can discuss the engineering behind the project, including:
 
 * Software architecture
-* Technical decisions
 * API integrations
 * Database design
-* Authentication
+* Authentication and identity management
+* Data processing
 * Automation strategies
+* External system integration
+* Caching and resilience
 * Deployment infrastructure
 * Development workflows
-* Challenges and solutions
-* Performance and maintainability
+* Performance considerations
+* Technical challenges and solutions
+
+This has become an important part of my development experience: **building software that has to work beyond a development environment.**
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 ### Languages
 
@@ -276,6 +328,7 @@ Even when the source code is private, I can discuss the engineering behind these
 ### Desktop
 
 ![Electron](https://img.shields.io/badge/Electron-47848F?style=flat-square\&logo=electron\&logoColor=white)
+![Python Desktop](https://img.shields.io/badge/Python%20Desktop-3776AB?style=flat-square\&logo=python\&logoColor=white)
 
 ### Databases
 
@@ -289,6 +342,12 @@ Even when the source code is private, I can discuss the engineering behind these
 ![OpenRouter](https://img.shields.io/badge/OpenRouter-412991?style=flat-square)
 ![Google Gemini](https://img.shields.io/badge/Gemini%20API-8E75B2?style=flat-square\&logo=googlegemini\&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square\&logo=n8n\&logoColor=white)
+
+### Data & Automation Tools
+
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square\&logo=microsoftexcel\&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat-square\&logo=latex\&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square\&logo=playwright\&logoColor=white)
 
 ### DevOps & Deployment
 
@@ -307,32 +366,37 @@ Even when the source code is private, I can discuss the engineering behind these
 
 ---
 
-## 🧠 Engineering Interests
+# 🧠 Engineering Interests
 
-I'm particularly interested in building systems that combine:
+I'm particularly interested in systems that combine:
 
 * **Software Engineering**
 * **Artificial Intelligence**
 * **Automation**
 * **Cloud & Web Technologies**
+* **Data Processing**
+* **APIs & System Integrations**
 * **Developer Tools**
-* **Data & APIs**
-* **Interactive Applications**
+* **Desktop Applications**
+* **Distributed & Resilient Systems**
 
 I enjoy learning new technologies by **building actual products and solving concrete problems**.
 
 ---
 
-## 🌱 Currently Exploring
+# 🌱 Currently Exploring
 
 * 🏗️ Software Architecture & Design Patterns
 * 🤖 Artificial Intelligence & LLM applications
-* ☁️ Cloud infrastructure and deployment
-* ⚙️ Scalable backend systems
-* 🔄 Advanced workflow automation
-* 🧩 System integrations and developer tooling
+* ☁️ Cloud infrastructure and production deployment
+* ⚙️ Advanced workflow automation
+* 🔄 External system integrations
+* 📊 Large-scale data processing
+* 🧩 Developer tooling
+* 🖥️ Cross-platform desktop applications
 
 ---
+
 # 📈 GitHub Statistics
 
 <p align="center">
@@ -356,9 +420,9 @@ I enjoy learning new technologies by **building actual products and solving conc
 
 ---
 
-## 🤝 Let's Connect
+# 🤝 Let's Connect
 
-I'm always interested in **building useful software, collaborating on interesting projects, and exploring new ideas in technology**.
+I'm always interested in **building useful software, solving interesting technical problems, collaborating on projects and exploring new ideas in technology**.
 
 📧 **Email:** [danielpaezzamudio0@hotmail.com](mailto:danielpaezzamudio0@hotmail.com)
 
@@ -370,6 +434,6 @@ I'm always interested in **building useful software, collaborating on interestin
 
 <div align="center">
 
-### *Building software that turns ideas into useful products.*
+### *Building software that turns complex problems into useful products.*
 
 </div>
