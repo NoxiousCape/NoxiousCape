@@ -171,7 +171,7 @@ A desktop application designed to streamline the travel quotation workflow by co
 
 ## 🌍 M&D Travels
 
-🔗 https://mydtravels.vercel.app/
+🔗 https://mydtravels.com/
 
 Full Stack web platform developed for **M&D Travels Colombia**, combining a corporate website with interactive functionality and AI-powered features.
 
@@ -428,7 +428,7 @@ I'm always interested in **building useful software, solving interesting technic
 
 💻 **GitHub:** [github.com/NoxiousCape](https://github.com/NoxiousCape)
 
-🌍 **M&D Travels:** [mydtravels.vercel.app](https://mydtravels.vercel.app/)
+🌍 **M&D Travels:** [mydtravels.com](https://mydtravels.com/)
 
 ---
 
