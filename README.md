@@ -47,16 +47,6 @@ se cruza con un problema operativo concreto: **volumen** de datos,
 
 ---
 
-## 📊 En números
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.v3.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.v3.svg">
-  <img alt="Tarjetas con el número de proyectos entregados, despliegues en producción, repos públicos y corporalidades cubiertas" src="assets/card-stats-dark.v3.svg" width="100%">
-</picture>
-
----
-
 ## 🏗️ Trabajo seleccionado
 
 Una parte de mi portafolio es **privada o confidencial**: el código, los datos y
