@@ -1,0 +1,64 @@
+{
+  "version": 3,
+  "max_width": 1600,
+  "quality": 88,
+  "output_dir": "shots",
+  "shots": {
+    "secop": {
+      "source": "La_Manuelina_SECOP.png",
+      "alt": "Dashboard de Procesos SECOP: 56 procesos con detalle verificado, estado del portal en línea y los módulos de búsqueda por código, hora, entidad y lotes"
+    },
+    "central": {
+      "source": "Central_de_Consultas.png",
+      "alt": "Pantalla de búsqueda SAMAI de Central de Consultas La Manuelina, con el menú de radicado, parte procesal, Rama Judicial y consulta masiva"
+    },
+    "asobancaria": {
+      "source": "Asobancaria.png",
+      "alt": "Pantalla de acceso de ASOBANCARIA con el botón Continuar con Microsoft, sobre el logotipo institucional de La Manuelina y TRADENS"
+    },
+    "tradens": {
+      "source": "Tradens_Consulta_Masiva.png",
+      "alt": "Interfaz de Consulta Masiva Procuraduría: carga del archivo de lote en Excel, configuración de persona y documento, pausa entre consultas y reintentos"
+    },
+    "pdex": {
+      "source": "PDEx.png",
+      "alt": "Ventana de PDEx con los cinco pasos de la conversión: archivo Excel, hoja, configuración de página, destino y generación del PDF"
+    },
+    "abacre": {
+      "source": "Abacre.png",
+      "alt": "Contenido extraído del instalador de Abacre Antivirus: el ejecutable, el módulo de protección y la base de datos de firmas"
+    },
+    "abacre-debug": {
+      "source": "Abacre_Error251.png",
+      "alt": "OllyDbg mostrando el error 251 de protección que dispara el packer de Abacre al detectar el depurador"
+    },
+    "codramexc": {
+      "source": "CodRamExc.png",
+      "alt": "Ventana del generador de estructura de radicación de la Rama Judicial, con las opciones de obtener la estructura completa, obtener una muestra o exportar a Excel"
+    },
+    "sigbms": {
+      "source": "SIGBMS.png",
+      "alt": "Catálogo de libros de SIGBMS, la Biblioteca Municipal de Sogamoso, con las fichas y las fichas técnicas de las obras"
+    },
+    "unblockex": {
+      "source": "unblockex.png",
+      "alt": "UnBlockEx en la pestaña de fuerza bruta, con la selección de caracteres, la longitud mínima y máxima y el progreso de los intentos"
+    },
+    "mydtravels": {
+      "source": "mydtravels.png",
+      "alt": "Portada de M&D Travels con el buscador de destinos y los indicadores de destinos, viajeros y soportes"
+    },
+    "deleitarte": {
+      "source": "deleitarte.png",
+      "alt": "Portada de DeleitArte Pastelería Creativa, con el catálogo de pasteles artesanales y las llamadas a la acción"
+    },
+    "dupe": {
+      "source": "Dupe-Perfumes.png",
+      "alt": "Portada de Dupé Perfumería con la colección exclusiva y el acceso al catálogo y a la experiencia"
+    },
+    "jrmantenimiento": {
+      "source": "JRMANTENIMIENTOELECTRICO.png",
+      "alt": "Portada de JR Mantenimiento Eléctrico y Redes, con las soluciones de ingeniería eléctrica y el formulario de contacto"
+    }
+  }
+}

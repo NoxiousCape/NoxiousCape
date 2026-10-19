@@ -27,10 +27,13 @@ confiables, usables y mantenibles *fuera* del entorno de desarrollo.
 
 ## 🧭 Índice
 
-[Sobre mí](#sobre-mi) · [Trabajo seleccionado](#trabajo) · [Repos públicos](#repos) ·
-[Perfil técnico](#perfil) · [Experiencia](#experiencia) · [Contacto](#contacto)
+[Sobre mí](#sobre-mi) · [Una mirada](#mirada) · [Trabajo seleccionado](#trabajo) ·
+[Repos públicos](#repos) · [Perfil técnico](#perfil) · [Experiencia](#experiencia) ·
+[Contacto](#contacto)
 
 ---
+
+<a id="mirada"></a>
 
 <a id="sobre-mi"></a>
 
@@ -50,6 +53,44 @@ a que el servicio externo falle.
 ✦  Automatización      ·  Procesamiento de datos        ·  APIs e integraciones
 ✦  Despliegue en nube  ·  Arquitectura y diseño técnico ·  Datos a escala
 ```
+
+---
+
+## 🖼️ Una mirada
+
+Todo esto es software funcionando, no maquetas. Estas son las seis piezas que
+mejor resumen el portafolio; el resto aparece en las fichas de abajo.
+
+<table>
+  <tr>
+    <td width="33%" align="center" valign="top">
+      <img src="assets/shots/secop.v3.webp" alt="Dashboard de Procesos SECOP: 56 procesos con detalle verificado, estado del portal en línea y los módulos de búsqueda" width="100%">
+      <br><b>SECOP Optimizado</b><br><sub>Escritorio · La Manuelina</sub>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="assets/shots/central.v3.webp" alt="Pantalla de búsqueda SAMAI de Central de Consultas La Manuelina, con el menú de radicado, parte procesal, Rama Judicial y consulta masiva" width="100%">
+      <br><b>Central de Consultas</b><br><sub>Web · La Manuelina</sub>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="assets/shots/asobancaria.v3.webp" alt="Pantalla de acceso de ASOBANCARIA con el botón Continuar con Microsoft" width="100%">
+      <br><b>ASOBANCARIA</b><br><sub>Web · La Manuelina</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center" valign="top">
+      <img src="assets/shots/pdex.v3.webp" alt="Ventana de PDEx con los cinco pasos de la conversión de Excel a PDF" width="100%">
+      <br><b>PDEx</b><br><sub>Escritorio · Excel → PDF</sub>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="assets/shots/abacre-debug.v3.webp" alt="OllyDbg mostrando el error 251 de protección que dispara el packer de Abacre al detectar el depurador" width="100%">
+      <br><b>Abacre Antivirus</b><br><sub>Investigación · Código público</sub>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="assets/shots/mydtravels.v3.webp" alt="Portada de M&D Travels con el buscador de destinos y los indicadores de destinos, viajeros y soportes" width="100%">
+      <br><b>M&D Travels</b><br><sub>Web con IA · En producción</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -82,16 +123,16 @@ Plataforma **de escritorio** que automatiza la consulta del portal transaccional
 del Estado colombiano: 442 códigos UNSPSC, búsquedas por hora y por entidad, y
 **lotes automatizados** que se pueden pausar y reanudar.
 
+<img src="assets/shots/secop.v3.webp" alt="Dashboard de Procesos SECOP: 56 procesos con detalle verificado, el indicador del portal en línea con su latencia y los módulos de búsqueda" width="100%">
+
+<sub>El Dashboard: procesos con detalle verificado, búsquedas registradas, procesos
+seguidos y el estado real del portal con su tiempo de respuesta.</sub>
+
 * Automatización sobre una **sesión autenticada**, con resolución humana del CAPTCHA: el flujo no salta la comprobación ni la resuelve por medios técnicos
 * **Caché ≠ base de datos**: cada búsqueda en vivo nutre la base sola; repetir no re-scrapea
 * Lotes **reanudables** (3 fallos → pausa, Excel con una hoja por código) y **SSE reanexable**: si se cae la conexión, el servidor retoma la misma búsqueda
 * Instalador con doble clic, base propia o reutilización de un MySQL ya presente, y **actualización en un clic** con verificación SHA-256
 * **452 pruebas** de Vitest más integración contra MySQL
-
-<!-- CAPTURA: captura del Dashboard o de una búsqueda en curso (app de escritorio).
-     Guardar en assets/ y referenciar con <img src="assets/..." alt="..." width="100%">
-     El nombre del archivo puede llevar versión para romper la caché, igual que
-     los SVG: assets/secop-dashboard.v1.png -->
 
 </details>
 
@@ -101,14 +142,17 @@ del Estado colombiano: 442 códigos UNSPSC, búsquedas por hora y por entidad, y
 Consulta de procesos judiciales en dos jurisdicciones —**SAMAI** y **Rama
 Judicial**— más **consulta masiva** de estados desde Excel.
 
+<img src="assets/shots/central.v3.webp" alt="Pantalla de búsqueda SAMAI de Central de Consultas La Manuelina, con el menú de radicado, parte procesal, Rama Judicial y consulta masiva" width="100%">
+
+<sub>Búsqueda por radicado con la corporación deducida del número, y el menú
+completo: parte procesal, Rama Judicial y los tres modos de consulta masiva.</sub>
+
 * Búsqueda por **radicado de 23 dígitos** con identificación automática de la corporación, y por parte procesal sobre un catálogo de **76 corporaciones judiciales**
 * **Puente entre jurisdicciones**: los radicados no contenciosos redirigen a Rama Judicial y viceversa, con autobúsqueda en ambas
 * Expediente completo, visor PDF con progreso y descarga con el nombre real
 * **Consulta masiva** desde Excel: checkpoint reanudable, **soporta lotes de 142 k+ filas**, progreso SSE con ritmo y ETA, reintentos dirigidos y log de fallos por fila
 * **Búsqueda ampliada** con barrido geográfico (Departamento → Ciudad → Entidad → Especialidad → Despacho) para superar el límite de 1 000 registros
 * **Modo offline**: expedientes y PDFs ya consultados se sirven desde caché
-
-<!-- CAPTURA: pantalla de consulta masiva con el progreso en vivo (SSE) -->
 
 </details>
 
@@ -119,13 +163,16 @@ Plataforma institucional para el seguimiento de procesos judiciales
 (Corte Constitucional y Consejo de Estado) y del **proceso legislativo**
 (Senado, Cámara y Gacetas).
 
+<img src="assets/shots/asobancaria.v3.webp" alt="Pantalla de acceso de ASOBANCARIA con el botón Continuar con Microsoft, sobre el logotipo institucional de La Manuelina y TRADENS" width="100%">
+
+<sub>El acceso real a la plataforma: identidad federada de Microsoft Entra ID,
+con el cierre de sesión único y los roles ya resueltos en el token.</sub>
+
 * **Autenticación real con Microsoft Entra ID**: app registration, login federado y single sign-out
 * Ingesta y **normalización de datos desde Excel** como paso formal del proyecto
 * Exportación a Excel y PDF con un criterio visual único
 * Despliegue en **Railway** con Dockerfile propio y add-on MySQL
 * Entorno local **sin Docker**: SQLite embebido en Prisma y modo `mock` de autenticación
-
-<!-- CAPTURA: tabla de procesos judiciales o detalle de una actuación -->
 
 </details>
 
@@ -135,11 +182,55 @@ Plataforma institucional para el seguimiento de procesos judiciales
 Herramienta que consulta **nombres y apellidos** en la Sede Electrónica de la
 Procuraduría General de la Nación a partir de un Excel de cédulas.
 
+<img src="assets/shots/tradens.v3.webp" alt="Interfaz de Consulta Masiva Procuraduría: carga del archivo de lote en Excel, configuración de persona y documento, pausa entre consultas y reintentos" width="100%">
+
+<sub>El flujo completo en una pantalla: cargar el lote, configurar los parámetros
+de la consulta y ejecutarla con los contadores en vivo.</sub>
+
 * **Investigación documentada**: no existe API REST pública; el portal es *low-code* Appian con reCAPTCHA Enterprise
 * **Arquitectura hexagonal** (dominio / puertos / adaptadores): si mañana se contrata una API de pago, se cambia **un solo adaptador** y el negocio no se toca
 * Lotes con reintentos con backoff, pausa humana, **checkpoint de reanudación** y deduplicación
 * CLI **y** UI web local, distribuida como un único `.exe` portable
 * Decisión documentada: portable y no en la nube, porque el reCAPTCHA penaliza las IP de datacenter
+
+</details>
+
+### 🧰 Herramientas de escritorio
+
+*Software que se instala con un doble clic y trabaja sin terminal ni servidor.*
+
+<details>
+<summary><b>📄 PDEx</b> · convierte hojas Excel densas en un PDF legible, ordenado y completo<br><i>🟢 En producción · uso corporativo · Python · Tkinter · ReportLab · PyInstaller</i></summary>
+
+Herramienta **100 % local** que convierte hojas Excel densas —cientos de filas,
+celdas de hasta 32 k caracteres— en un **PDF legible, ordenado y completo**,
+con maquetación inteligente en lugar de impresión directa.
+
+<img src="assets/shots/pdex.v3.webp" alt="Ventana de PDEx con los cinco pasos de la conversión: archivo Excel, hoja, configuración de página, destino y generación del PDF" width="100%">
+
+<sub>El asistente completo: elegir el Excel, la hoja, el papel y las márgenes, y
+generar el PDF con la barra de progreso en vivo.</sub>
+
+* **Análisis de estructura** (no simple impresión): perfil de columnas y filas, anchos dinámicos y columnas problemáticas
+* Principio rector explícito: `Legibilidad > Organización > Aprovechamiento > Reducción de páginas` — **nunca** se recorta, oculta ni resume
+* Fragmentación de mega-filas (> 1 página) por frontera de párrafo, con etiqueta `ID (cont. k/n)` y control viuda/huérfana
+* **Validación automática**: correspondencia de IDs, páginas vacías y verificación del documento generado
+* Portada opcional, salida unificada multi-hoja, alineación del texto de tabla, distribución corporativa con SemVer
+
+</details>
+
+<details>
+<summary><b>💼 M&D Cotizaciones</b> · cotizador de viajes con navegador embebido y export a Excel y PDF<br><i>🟢 En producción · M&D Travels Colombia · Electron · ExcelJS · LaTeX · OpenRouter</i></summary>
+
+App de escritorio para que el equipo de la agencia prepare cotizaciones
+profesionales: **no busca sola**, integra un navegador donde el cotizante
+navega Booking, Airbnb y aerolíneas, captura las ofertas con un clic y exporta
+todo a Excel o a un PDF generado con LaTeX.
+
+* **Navegador embebido** completo con barra de marcadores, y captura de la oferta con un solo clic (o `Alt + A`)
+* Exportación a **Excel** con totales en COP y a **PDF** con LaTeX en estilo *boarding pass*
+* **IA opcional** (OpenRouter) que **sólo redacta**: la búsqueda la hace una persona
+* Alertas de presupuesto en vivo y **auto-actualización** vía GitHub Releases
 
 </details>
 
@@ -153,13 +244,19 @@ Procuraduría General de la Nación a partir de un Excel de cédulas.
 Análisis estático y forense de un antivirus de 2006 que obtuvo **0 % de
 detección** en dos pruebas de `virus.gr` (113 334 y 147 184 muestras).
 
+<img src="assets/shots/abacre.v3.webp" alt="Contenido extraído del instalador de Abacre Antivirus: el ejecutable, el módulo de protección y la base de datos de firmas" width="100%">
+
+<sub>Los ocho archivos extraídos del instalador: el ejecutable empaquetado, el
+módulo de protección y la base de datos de firmas, que resultó ser la pieza
+central del análisis.</sub>
+
 * **Protocolo académico estricto**: los binarios nunca se ejecutan en el host, solo en una VM aislada **sin red** (Windows XP SP3)
 * El *packer* detecta a OllyDbg (`Error 251`); `NTSD -pv` permite obtener un **dump completo de 29 MB** sin activar la detección
 * Hallazgo central: cifrador **Blowfish** y una base de solo **67 firmas (2003-2005)** — la explicación plausible del 0 %
 * 24 capturas de debugging, scripts Python reproducibles y hashes SHA-256 de cada artefacto
 * **Honestidad intelectual**: el README separa hechos de hipótesis y enumera lo que **no** se pudo verificar
 
-<img alt="OllyDbg mostrando el error 251 de protección que dispara el packer al detectar el depurador" src="assets/abacre-error251.v1.png" width="860">
+<img alt="OllyDbg mostrando el error 251 de protección que dispara el packer de Abacre al detectar el depurador" src="assets/shots/abacre-debug.v3.webp" width="100%">
 
 *El packer detecta el depurador y aborta con `Error 251`. Con `NTSD -pv` el mismo
 proceso se volca completo: por eso el repositorio documenta los **dos** intentos
@@ -196,6 +293,11 @@ Extrae la **estructura jerárquica real** de los códigos que usa la Rama Judici
 para construir el número de radicación, y la exporta como tabla piramidal
 clasificada por ciudad.
 
+<img src="assets/shots/codramexc.v3.webp" alt="Ventana del generador de estructura de radicación de la Rama Judicial, con las opciones de obtener la estructura completa, obtener una muestra o exportar a Excel" width="100%">
+
+<sub>La herramienta: obtener la estructura nacional completa, una muestra rápida
+de una ciudad, o exportar el Excel ya clasificado.</sub>
+
 * Cobertura **nacional**: 33 departamentos, **17 457 elementos**, 11 551 rutas constructoras, reporte de inconsistencias sin observaciones
 * Excel de 5 hojas: estructura jerárquica, datos normalizados, **constructor de códigos**, relaciones y reporte de calidad
 * Extracción **reanudable** (caché + checkpoint) frente a 403 intermitentes y respuestas vacías: el reintento y el backoff son explícitos, nunca silenciosos
@@ -209,15 +311,14 @@ clasificada por ciudad.
 
 <a id="repos"></a>
 
-| Repositorio | Qué es | Stack |
-|---|---|---|
-| **[Abacre_Investigation](https://github.com/NoxiousCape/Abacre_Investigation)** | Ingeniería inversa forense de un antivirus histórico | `Python` `C/C++` |
-| **[La_Manuelina_Web](https://github.com/NoxiousCape/La_Manuelina_Web)** | Portal SECOP & CC2026: normalización de datos, MySQL, roles JWT y PWA offline | `Node.js` `Express` `MySQL` `PWA` |
-| **[SIGBMS](https://github.com/NoxiousCape/SIGBMS)** | Sistema integral de gestión para la Biblioteca Municipal de Sogamoso | `Java 21` `Spring Boot 3.1` `MySQL 8` |
-| **[UnBlockEx](https://github.com/NoxiousCape/UnBlockEx)** | Recuperación de Excel cifrado (AES-256) por tres estrategias | `Python` `Tkinter` |
-| **[Triki](https://github.com/NoxiousCape/Triki)** | Tres en línea: web *glassmorphism* + consola en Ruby, IA con Minimax | `JavaScript` `Ruby` |
-| **[Cadenas_en_C](https://github.com/NoxiousCape/Cadenas_en_C)** | Manipulación de cadenas con menú interactivo | `C` |
-| **[Procesos_SECOP-Releases](https://github.com/NoxiousCape/Procesos_SECOP-Releases)** | Canal público de releases del instalador de SECOP (el código es privado) | — |
+| | Repositorio | Qué es | Stack |
+|---|---|---|---|
+| <img src="assets/shots/sigbms.v3.webp" alt="Catálogo de libros de SIGBMS, la Biblioteca Municipal de Sogamoso" width="120"> | **[SIGBMS](https://github.com/NoxiousCape/SIGBMS)** | Sistema integral de gestión para la Biblioteca Municipal de Sogamoso | `Java 21` `Spring Boot 3.1` `MySQL 8` |
+| <img src="assets/shots/unblockex.v3.webp" alt="UnBlockEx en la pestaña de fuerza bruta, con la selección de caracteres y la longitud configurables" width="120"> | **[UnBlockEx](https://github.com/NoxiousCape/UnBlockEx)** | Recuperación de Excel cifrado (AES-256) por tres estrategias | `Python` `Tkinter` |
+| | **[Abacre_Investigation](https://github.com/NoxiousCape/Abacre_Investigation)** | Ingeniería inversa forense de un antivirus histórico | `Python` `C/C++` |
+| | **[La_Manuelina_Web](https://github.com/NoxiousCape/La_Manuelina_Web)** | Portal SECOP & CC2026: normalización de datos, MySQL, roles JWT y PWA offline | `Node.js` `Express` `MySQL` `PWA` |
+| | **[Triki](https://github.com/NoxiousCape/Triki)** | Tres en línea: web *glassmorphism* + consola en Ruby, IA con Minimax | `JavaScript` `Ruby` |
+| | **[Cadenas_en_C](https://github.com/NoxiousCape/Cadenas_en_C)** | Manipulación de cadenas con menú interactivo | `C` |
 
 > **SIGBMS** se desarrolló para la materia *Ingeniería de Software II* de la
 > **UPTC**, junto a dos compañeros y bajo la dirección del Ing. Edmundo Junco.
@@ -226,14 +327,35 @@ clasificada por ciudad.
 
 *Trabajo comercial entregado y en funcionamiento.*
 
-| Proyecto | En vivo | Qué hay detrás |
-|---|---|---|
-| **M&D Travels** | [mydtravels.com](https://mydtravels.com/) | Sitio + asistente de viajes con IA, blog desde RSS, PWA, reCAPTCHA y Resend |
-| **M&D Cotizaciones** *(escritorio)* | — | App **Electron** con navegador embebido, captura de ofertas en un clic, export a Excel y PDF con LaTeX, IA opcional y auto-actualización |
-| **DeleitArte** *(pastelería)* | [pasteleriadeleitarte.com](https://pasteleriadeleitarte.com/) | Catálogo, **armador de pasteles 3D**, pedido libre con foto, reserva de espacio multi-paso y PWA |
-| **JR Mantenimiento Eléctrico** | [jrmantenimientoelectrico.com](https://jrmantenimientoelectrico.com/) | Sitio corporativo con GSAP y Swiper, PWA, legal (Habeas Data) y SEO técnico |
-| **Beniet Perfumería** *(Dupé)* | [duperfumes.vercel.app](https://duperfumes.vercel.app/) | E-commerce editorial con React + Vite, **kiosco táctil con quiz** y PWA |
-| **La Manuelina** *(web)* | — | Portal institucional con módulos de SECOP y Corte Constitucional, roles y PWA offline |
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/shots/mydtravels.v3.webp" alt="Portada de M&D Travels con el buscador de destinos y los indicadores de destinos, viajeros y soportes" width="100%">
+      <br><b>M&D Travels</b> · <a href="https://mydtravels.com/">mydtravels.com</a><br>
+      <sub>Sitio con asistente de viajes con IA, blog desde RSS, PWA, reCAPTCHA y Resend</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/shots/deleitarte.v3.webp" alt="Portada de DeleitArte Pastelería Creativa, con el catálogo de pasteles artesanales" width="100%">
+      <br><b>DeleitArte</b> · <a href="https://pasteleriadeleitarte.com/">pasteleriadeleitarte.com</a><br>
+      <sub>Catálogo, armador de pasteles 3D, pedido libre con foto, reserva de espacio y PWA</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/shots/jrmantenimiento.v3.webp" alt="Portada de JR Mantenimiento Eléctrico y Redes, con las soluciones de ingeniería eléctrica" width="100%">
+      <br><b>JR Mantenimiento Eléctrico</b> · <a href="https://jrmantenimientoelectrico.com/">jrmantenimientoelectrico.com</a><br>
+      <sub>Sitio corporativo con GSAP y Swiper, PWA, legal (Habeas Data) y SEO técnico</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/shots/dupe.v3.webp" alt="Portada de Dupé Perfumería con la colección exclusiva y el acceso a la experiencia" width="100%">
+      <br><b>Dupé Perfumería</b> · <a href="https://duperfumes.vercel.app/">duperfumes.vercel.app</a><br>
+      <sub>E-commerce editorial con React + Vite, kiosco táctil con quiz de recomendación y PWA</sub>
+    </td>
+  </tr>
+</table>
+
+**La Manuelina (web institucional)** — portal con módulos de SECOP y Corte
+Constitucional, control por roles y PWA offline.
 
 ---
 

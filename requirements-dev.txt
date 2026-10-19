@@ -1,0 +1,8 @@
+# Dependencias de desarrollo (no hacen falta para regenerar los SVG).
+#
+#     pip install -r requirements-dev.txt
+#
+# Pillow se usa únicamente para optimizar las capturas de pantalla a WebP
+# (scripts/sync_images.py). El núcleo del repositorio —los SVG del perfil—
+# sigue sin dependencias: sólo biblioteca estándar.
+Pillow>=10.0
