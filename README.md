@@ -16,9 +16,9 @@ confiables, usables y mantenibles *fuera* del entorno de desarrollo.
 </div>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.v3.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.v3.svg">
-  <img alt="Terminal con el perfil, el stack técnico y el resumen del portafolio de Daniel Páez" src="assets/banner-dark.v3.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.v5.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.v5.svg">
+  <img alt="Terminal con el perfil, el stack técnico y el resumen del portafolio de Daniel Páez" src="assets/banner-dark.v5.svg" width="100%">
 </picture>
 
 ---
@@ -230,9 +230,9 @@ sociales.
 ## 🧠 Perfil técnico
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.v3.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.v3.svg">
-  <img alt="Radar de habilidades: en producción y en investigación" src="assets/radar-dark.v3.svg" width="620">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.v5.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.v5.svg">
+  <img alt="Radar de habilidades: en producción y en investigación" src="assets/radar-dark.v5.svg" width="620">
 </picture>
 
 <div align="center">
@@ -243,7 +243,7 @@ sociales.
 
 | Todo el portafolio (público + privado) | Solo repos públicos (medido por la API) |
 |---|---|
-| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/metrics.languages-dark.v3.svg"><source media="(prefers-color-scheme: light)" srcset="assets/metrics.languages-light.v3.svg"><img alt="Lenguajes por volumen de código en todos los proyectos" src="assets/metrics.languages-dark.v3.svg" width="100%"></picture> | <img alt="Lenguajes más usados en los repositorios públicos" src="profile/top-langs.svg" width="300"> |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/metrics.languages-dark.v5.svg"><source media="(prefers-color-scheme: light)" srcset="assets/metrics.languages-light.v5.svg"><img alt="Lenguajes por volumen de código en todos los proyectos" src="assets/metrics.languages-dark.v5.svg" width="100%"></picture> | <img alt="Lenguajes más usados en los repositorios públicos" src="profile/top-langs.svg" width="300"> |
 
 <sub>La columna izquierda suma los repos públicos (medidos con la API de GitHub) y
 los proyectos privados (estimados a partir de su estructura). La derecha es la

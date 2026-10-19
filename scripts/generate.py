@@ -15,6 +15,8 @@ cambia, no genera ruido.
 
 from __future__ import annotations
 
+import hashlib
+import json
 import sys
 from pathlib import Path
 
@@ -27,6 +29,8 @@ import radar  # noqa: E402
 import sync_readme  # noqa: E402
 from svgkit import ASSETS, current_version  # noqa: E402
 
+STATE_FILE = ASSETS / "state.json"
+
 
 def generate_all() -> None:
     banner.main()
@@ -35,9 +39,37 @@ def generate_all() -> None:
     languages.main()
 
 
-def snapshot() -> dict[str, str]:
-    """Contenido actual de los SVG versionados."""
-    return {path.name: path.read_text(encoding="utf-8") for path in ASSETS.glob("*.v*.svg")}
+def logical_name(filename: str) -> str:
+    """`banner-dark.v3.svg` -> `banner-dark` (sin la versión)."""
+    parts = filename.split(".v")
+    return parts[0] if len(parts) > 1 else filename
+
+
+def fingerprints() -> dict[str, str]:
+    """Huella del contenido de cada asset, indexada por nombre lógico.
+
+    El contenido del SVG no depende de la versión (sólo el nombre del
+    archivo), así que la huella compara el *qué* con el *cómo se llama*.
+    """
+    result: dict[str, str] = {}
+    for path in ASSETS.glob("*.v*.svg"):
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        result[logical_name(path.name)] = digest
+    return result
+
+
+def load_state() -> dict[str, str]:
+    """Huellas de la última generación conocida."""
+    if not STATE_FILE.exists():
+        return {}
+    with STATE_FILE.open(encoding="utf-8-sig") as handle:
+        return json.load(handle)
+
+
+def save_state(state: dict[str, str]) -> None:
+    STATE_FILE.write_text(
+        json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
 
 
 def remove_stale(version: int) -> None:
@@ -56,20 +88,21 @@ def main() -> None:
         print(f"Versión de assets: v{version}")
         generate_all()
         remove_stale(version)
+        save_state(fingerprints())
         sync_readme.sync()
         print("Listo.")
         return
 
     print("Generando los SVG del perfil…")
-    before = snapshot()
     generate_all()
-    after = snapshot()
+    current = fingerprints()
 
-    if before != after:
+    if current != load_state():
         version = sync_readme.bump()
         print(f"  · el contenido cambió → versión v{version}")
         generate_all()
         remove_stale(version)
+        save_state(fingerprints())
     else:
         print(f"  · sin cambios (se mantiene la versión v{current_version()})")
 

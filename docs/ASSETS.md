@@ -12,7 +12,8 @@ assets/
 ├── stats.json         # tarjetas de métricas
 ├── languages.json     # volumen de código por lenguaje
 ├── stack.json         # lista de iconos del stack técnico
-└── version.json       # versión de los assets (para romper la caché)
+├── version.json       # versión de los assets (para romper la caché)
+└── state.json         # huellas del contenido de la última generación
 ```
 
 ## Regenerar
@@ -24,13 +25,16 @@ python scripts/generate.py
 El script:
 
 1. regenera los SVG con la versión actual,
-2. **compara** el resultado con lo que ya estaba en el disco,
-3. si el contenido cambió, **sube la versión** (`v1` → `v2`) y reescribe las
-   referencias del README,
-4. borra los SVG de versiones anteriores.
+2. calcula la **huella SHA-256** de cada asset,
+3. la compara con `assets/state.json`,
+4. si el contenido cambió, **sube la versión** (`v1` → `v2`), regenera, borra
+   los SVG de versiones anteriores y reescribe las referencias del README,
+5. si nada cambió, no toca nada.
 
-Si nada cambió, no se toca nada: así el workflow de GitHub Actions no genera
-commits de ruido.
+Comparar por huella y no por "el archivo es igual que en disco" importa: si
+editas un script y ejecutas **sólo** ese script, el disco ya coincide con lo
+generado, pero el README seguiría apuntando a un archivo con el mismo nombre
+y GitHub no refrescaría la caché. Con `state.json` el caso se detecta igual.
 
 ```bash
 python scripts/generate.py --bump   # fuerza el cambio de versión
