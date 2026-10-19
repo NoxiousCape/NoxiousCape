@@ -52,10 +52,13 @@ def download(url: str) -> str:
 
 
 def normalize(svg: str) -> str:
-    """Limpia el SVG servido: quita el espacio de nombres `xlink` y fija un
-    tamaño intrínseco legible (el original trae decimales odd)."""
+    """Limpia el SVG servido: quita el espacio de nombres `xlink`, fija un
+    tamaño intrínseco legible (el original trae decimales odd) y normaliza los
+    saltos de línea a LF para que el archivo sea idéntico en cualquier
+    sistema."""
     svg = svg.replace(' xmlns:xlink="http://www.w3.org/1999/xlink"', "")
     svg = svg.replace(' version="1.1"', "")
+    svg = svg.replace("\r\n", "\n").replace("\r", "\n")
     return svg.strip()
 
 
@@ -79,7 +82,7 @@ def main() -> None:
         raise SystemExit(1)
 
     output = ASSETS / config.get("output", "stack.svg")
-    output.write_text(svg + "\n", encoding="utf-8")
+    output.write_text(svg + "\n", encoding="utf-8", newline="\n")
 
     icons = len(config["icons"].split(","))
     size_kb = output.stat().st_size / 1024

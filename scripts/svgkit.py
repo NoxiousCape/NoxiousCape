@@ -148,7 +148,12 @@ def save_svg(base: str, width: int, height: int, body: str, theme: Theme,
         f"<title id=\"t-{uid}\">{esc(title)}</title>"
         f"<desc id=\"d-{uid}\">{esc(desc or title)}</desc>"
     )
-    path.write_text(f"{header}{body}</svg>\n", encoding="utf-8")
+    # newline="\n" es obligatorio: sin él, Windows traduce los saltos de
+    # línea a CRLF y el archivo queda un byte distinto al que genera Linux.
+    # Como la detección de cambios se hace por huella SHA-256, esa diferencia
+    # haría que el workflow de GitHub Actions regenerase los assets —y
+    # subiese la versión— en cada ejecución.
+    path.write_text(f"{header}{body}</svg>\n", encoding="utf-8", newline="\n")
     return path
 
 

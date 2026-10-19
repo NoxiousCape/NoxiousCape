@@ -67,8 +67,11 @@ def load_state() -> dict[str, str]:
 
 
 def save_state(state: dict[str, str]) -> None:
+    # newline="\n" para que el archivo sea idéntico en Windows y en Linux.
     STATE_FILE.write_text(
-        json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        json.dumps(state, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
 
 

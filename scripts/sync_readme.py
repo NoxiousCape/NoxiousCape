@@ -31,7 +31,9 @@ def bump() -> int:
     """Sube la versión en ``assets/version.json`` y la devuelve."""
     version = current_version() + 1
     VERSION_FILE.write_text(
-        json.dumps({"version": version}, indent=2) + "\n", encoding="utf-8"
+        json.dumps({"version": version}, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
     return version
 
@@ -50,7 +52,7 @@ def sync() -> int:
     )
 
     if updated != original:
-        README.write_text(updated, encoding="utf-8")
+        README.write_text(updated, encoding="utf-8", newline="\n")
         print(f"  ✓ README actualizado a la versión v{version}")
     else:
         print(f"  · README ya apuntaba a la versión v{version}")
