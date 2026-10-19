@@ -1,0 +1,26 @@
+﻿{
+  "title": "Números",
+  "subtitle": "un resumen honesto del portafolio",
+  "tiles": [
+    {
+      "value": "14",
+      "label": "Proyectos entregados",
+      "hint": "desktop · web · CLI"
+    },
+    {
+      "value": "6",
+      "label": "En producción",
+      "hint": "con usuarios reales"
+    },
+    {
+      "value": "8",
+      "label": "Repos públicos",
+      "hint": "código disponible"
+    },
+    {
+      "value": "76",
+      "label": "Corporaciones",
+      "hint": "Rama Judicial, Colombia"
+    }
+  ]
+}

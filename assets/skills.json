@@ -1,0 +1,25 @@
+{
+  "title": "Perfil técnico",
+  "subtitle": "dónde ya tengo recorrido y dónde sigo creciendo",
+  "axes": [
+    "Backend",
+    "Frontend",
+    "Escritorio",
+    "Datos",
+    "IA y automatización",
+    "Cloud y DevOps",
+    "Seguridad y RE"
+  ],
+  "series": [
+    {
+      "name": "En producción",
+      "color": "accent",
+      "values": [92, 86, 84, 78, 70, 76, 66]
+    },
+    {
+      "name": "En investigación",
+      "color": "accent2",
+      "values": [68, 52, 58, 76, 84, 48, 92]
+    }
+  ]
+}

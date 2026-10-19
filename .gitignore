@@ -1,0 +1,21 @@
+# --- Material local de trabajo (no va al repositorio del perfil) ---
+# Los README de los proyectos traídos como fuente para redactar el perfil.
+[0-9]*.md
+README.anterior.md
+
+# --- Previews locales ---
+.preview*.html
+preview*.html
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Sistema operativo / editores ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

@@ -1,0 +1,95 @@
+{
+  "window_title": "noxiouscape@dev:~/portfolio",
+  "font_size": 14.5,
+  "char_width": 8.6,
+  "lines": [
+    [
+      { "t": "$ ", "c": "prompt" },
+      { "t": "whoami", "c": "cmd" }
+    ],
+    [
+      { "t": "Daniel Steven Páez Zamudio", "c": "strong" },
+      { "t": "  ·  Ingeniero de Sistemas y Computación (UPTC)", "c": "muted" }
+    ],
+    [
+      { "t": "Sogamoso, Boyacá — Colombia", "c": "muted" }
+    ],
+    [],
+    [
+      { "t": "$ ", "c": "prompt" },
+      { "t": "cat ./stack.txt", "c": "cmd" }
+    ],
+    [
+      { "t": "Node.js", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "TypeScript", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "Python", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "Java", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "C/C++", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "C#", "c": "key" }
+    ],
+    [
+      { "t": "Next.js", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "React", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "Express", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "Spring Boot", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "PyQt", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "Electron", "c": "key" }
+    ],
+    [
+      { "t": "MySQL", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "PostgreSQL", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "Playwright", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "Docker", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "Railway", "c": "key" },
+      { "t": " · ", "c": "muted" },
+      { "t": "Vercel", "c": "key" }
+    ],
+    [],
+    [
+      { "t": "$ ", "c": "prompt" },
+      { "t": "cat ./enfoque.txt", "c": "cmd" }
+    ],
+    [
+      { "t": "Automatización de procesos judiciales públicos y privados.", "c": "text" }
+    ],
+    [
+      { "t": "Ingeniería inversa · Análisis de malware · OCR de licencias.", "c": "text" }
+    ],
+    [
+      { "t": "Software de escritorio · Web · IA aplicada · Datos a escala.", "c": "text" }
+    ],
+    [],
+    [
+      { "t": "$ ", "c": "prompt" },
+      { "t": "./build.sh --all", "c": "cmd" }
+    ],
+    [
+      { "t": "✓ ", "c": "ok" },
+      { "t": "14 proyectos", "c": "text" },
+      { "t": "  ·  ", "c": "muted" },
+      { "t": "6 en producción", "c": "text" },
+      { "t": "  ·  ", "c": "muted" },
+      { "t": "8 repos públicos", "c": "text" }
+    ],
+    [
+      { "t": "✓ ", "c": "ok" },
+      { "t": "452 pruebas", "c": "text" },
+      { "t": "  ·  ", "c": "muted" },
+      { "t": "0 fallos", "c": "ok" }
+    ]
+  ]
+}

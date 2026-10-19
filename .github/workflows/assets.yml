@@ -1,0 +1,52 @@
+name: Actualizar assets del perfil
+
+# Regenera los SVG del README (banner, radar, tarjetas y lenguajes).
+#
+# La versión de los assets sube SOLO cuando el contenido cambia de verdad:
+# GitHub cachea los SVG embebidos en un README durante largos periodos, así
+# que cambiar el nombre del archivo (v1 -> v2) es lo que rompe esa caché.
+
+"on":
+  workflow_dispatch:
+  schedule:
+    - cron: "23 4 * * 1"   # lunes 04:23 UTC
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Generar SVG
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Los scripts sólo usan la biblioteca estándar: no hay `pip install`.
+      - name: Generar los assets
+        run: python scripts/generate.py
+
+      - name: Publicar el commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/ README.md
+
+          if git diff --cached --quiet; then
+            echo "Los assets no cambiaron: no se hace commit."
+          else
+            VERSION=$(python -c "import json;print(json.load(open('assets/version.json'))['version'])")
+            git commit -m "chore(perfil): regenerar assets v${VERSION}"
+            git push
+          fi
