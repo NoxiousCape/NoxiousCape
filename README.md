@@ -62,41 +62,53 @@ la infraestructura de varios de estos sistemas no pueden hacerse públicos. Aun
 así, lo que construí y por qué está a la vista.
 
 > 👆 **Abre cada proyecto** para ver el stack, los retos técnicos y cómo quedó.
+>
+> Cada línea lleva una etiqueta de **madurez**: 🟢 en producción · 🔬 trabajo
+> documentado · 🛠️ en construcción.
 
 ### ⚖️ Plataformas judiciales y de contratación pública
 
+*Trabajo comercial, en producción con usuarios reales.*
+
 <details>
-<summary><b>🔎 SECOP Optimizado</b> · escritorio para consultar y seguir procesos de contratación en SECOP<br><i>La Manuelina S.A.S. · 2026 · Node.js · React · MariaDB · Playwright</i></summary>
+<summary><b>★ 🔎 SECOP Optimizado</b> · escritorio para consultar y seguir procesos de contratación en SECOP<br><i>🟢 En producción · La Manuelina S.A.S. · 2026 · Node.js · React · MariaDB · Playwright</i></summary>
 
 Plataforma **de escritorio** que automatiza la consulta del portal transaccional
 del Estado colombiano: 442 códigos UNSPSC, búsquedas por hora y por entidad, y
 **lotes automatizados** que se pueden pausar y reanudar.
 
-* Búsqueda **100 % autenticada** al portal; el captcha **no se salta**: lo resuelve una persona con su propio ratón (FFI → `user32`)
+* Automatización sobre una **sesión autenticada**, con resolución humana del CAPTCHA: el flujo no salta la comprobación ni la resuelve por medios técnicos
 * **Caché ≠ base de datos**: cada búsqueda en vivo nutre la base sola; repetir no re-scrapea
 * Lotes **reanudables** (3 fallos → pausa, Excel con una hoja por código) y **SSE reanexable**: si se cae la conexión, el servidor retoma la misma búsqueda
-* Instalador con doble clic, base propia o reutilización de XAMPP, y **actualización en un clic** con verificación SHA-256
-* **452 pruebas automatizadas**
+* Instalador con doble clic, base propia o reutilización de un MySQL ya presente, y **actualización en un clic** con verificación SHA-256
+* **452 pruebas** de Vitest más integración contra MySQL
+
+<!-- CAPTURA: captura del Dashboard o de una búsqueda en curso (app de escritorio).
+     Guardar en assets/ y referenciar con <img src="assets/..." alt="..." width="100%">
+     El nombre del archivo puede llevar versión para romper la caché, igual que
+     los SVG: assets/secop-dashboard.v1.png -->
 
 </details>
 
 <details>
-<summary><b>📚 Central de Consultas</b> · plataforma web para consultar procesos judiciales en Colombia<br><i>La Manuelina S.A.S. · 2026 · Node.js · Express · MySQL · ExcelJS · SSE</i></summary>
+<summary><b>★ 📚 Central de Consultas</b> · plataforma web para consultar procesos judiciales en Colombia<br><i>🟢 En producción · La Manuelina S.A.S. · 2026 · Node.js · Express · MySQL · ExcelJS · SSE</i></summary>
 
 Consulta de procesos judiciales en dos jurisdicciones —**SAMAI** y **Rama
 Judicial**— más **consulta masiva** de estados desde Excel.
 
-* Búsqueda por **radicado de 23 dígitos** con identificación automática de la corporación, y por parte procesal en **76 corporaciones judiciales** del país
+* Búsqueda por **radicado de 23 dígitos** con identificación automática de la corporación, y por parte procesal sobre un catálogo de **76 corporaciones judiciales**
 * **Puente entre jurisdicciones**: los radicados no contenciosos redirigen a Rama Judicial y viceversa, con autobúsqueda en ambas
 * Expediente completo, visor PDF con progreso y descarga con el nombre real
-* **Consulta masiva** desde Excel: checkpoint reanudable (142 k+ filas), progreso SSE con ritmo y ETA, reintentos dirigidos y log de fallos por fila
+* **Consulta masiva** desde Excel: checkpoint reanudable, **soporta lotes de 142 k+ filas**, progreso SSE con ritmo y ETA, reintentos dirigidos y log de fallos por fila
 * **Búsqueda ampliada** con barrido geográfico (Departamento → Ciudad → Entidad → Especialidad → Despacho) para superar el límite de 1 000 registros
 * **Modo offline**: expedientes y PDFs ya consultados se sirven desde caché
+
+<!-- CAPTURA: pantalla de consulta masiva con el progreso en vivo (SSE) -->
 
 </details>
 
 <details>
-<summary><b>🏛️ ASOBANCARIA</b> · gestión de procesos judiciales y legislativos con identidad federada<br><i>La Manuelina S.A.S. · 2026 · Next.js · TypeScript · Prisma · MySQL · Entra ID · Railway</i></summary>
+<summary><b>★ 🏛️ ASOBANCARIA</b> · gestión de procesos judiciales y legislativos con identidad federada<br><i>🟢 En producción · La Manuelina S.A.S. · 2026 · Next.js · TypeScript · Prisma · MySQL · Entra ID · Railway</i></summary>
 
 Plataforma institucional para el seguimiento de procesos judiciales
 (Corte Constitucional y Consejo de Estado) y del **proceso legislativo**
@@ -108,10 +120,12 @@ Plataforma institucional para el seguimiento de procesos judiciales
 * Despliegue en **Railway** con Dockerfile propio y add-on MySQL
 * Entorno local **sin Docker**: SQLite embebido en Prisma y modo `mock` de autenticación
 
+<!-- CAPTURA: tabla de procesos judiciales o detalle de una actuación -->
+
 </details>
 
 <details>
-<summary><b>🗂️ Consulta Masiva Procuraduría</b> · escritorio para consultar nombres por lotes de cédulas<br><i>TRADENS · 2026 · Python · Playwright · NiceGUI · arquitectura hexagonal</i></summary>
+<summary><b>🗂️ Consulta Masiva Procuraduría</b> · escritorio para consultar nombres por lotes de cédulas<br><i>🟢 En producción · TRADENS · 2026 · Python · Playwright · NiceGUI · arquitectura hexagonal</i></summary>
 
 Herramienta que consulta **nombres y apellidos** en la Sede Electrónica de la
 Procuraduría General de la Nación a partir de un Excel de cédulas.
@@ -126,8 +140,10 @@ Procuraduría General de la Nación a partir de un Excel de cédulas.
 
 ### 🔬 Investigación e ingeniería inversa
 
+*Trabajo propio, documentado y reproducible: se puede leer el método completo.*
+
 <details>
-<summary><b>🧬 Abacre Antivirus 1.3</b> · ingeniería inversa forense de un antivirus con 0 % de detección<br><i>Público · 2026 · Python · C/C++ · VMWare · NTSD · OllyDbg</i></summary>
+<summary><b>★ 🧬 Abacre Antivirus 1.3</b> · ingeniería inversa forense de un antivirus con 0 % de detección<br><i>🔬 Documentado · código público · Python · C/C++ · VMWare · NTSD · OllyDbg</i></summary>
 
 Análisis estático y forense de un antivirus de 2006 que obtuvo **0 % de
 detección** en dos pruebas de `virus.gr` (113 334 y 147 184 muestras).
@@ -143,27 +159,27 @@ detección** en dos pruebas de `virus.gr` (113 334 y 147 184 muestras).
 </details>
 
 <details>
-<summary><b>🔎 Investigación de portales sin API pública</b> · cómo se resuelve un sistema que no ofrece interfaz<br><i>SECOP · SAMAI · Rama Judicial · Procuraduría · Curaduría</i></summary>
+<summary><b>🔎 Investigación de portales sin API pública</b> · cómo se resuelve un sistema que no ofrece interfaz<br><i>🔬 Documentado · SECOP · SAMAI · Rama Judicial · Procuraduría · Curaduría</i></summary>
 
 Parte del trabajo no es una aplicación, es **descubrir cómo funciona un sistema
 que no ofrece interfaz para lo que necesito**:
 
-| Portal | Hallazgo | Cómo se resolvió |
+| Portal | El obstáculo | La salida |
 |---|---|---|
-| **SECOP** | Portal transaccional con captcha; sin API documentada | Sesión autenticada + automatización de navegador con las reglas del portal respetadas |
-| **SAMAI** | Solo expone expediente y documentos vía sesión web | Playwright con reintentos, backoff y clasificación de errores (`OFFLINE_SIN_COPIA`, `TIMEOUT`, `SAMAI_ERROR`) |
-| **Rama Judicial** | API JSON real, con límite de 1 000 registros | Cliente con pacer global, barrido geográfico y fusión de gemelos público/privado |
-| **Procuraduría** | Appian *low-code* con reCAPTCHA Enterprise; el endpoint histórico ya no existe | Dominio propio con puerto `ProveedorConsulta` intercambiable |
-| **Curaduría Urbana** | Resoluciones en PDF escaneado | Pipeline OCR híbrido con detección de la página resumen y saneado de alucinaciones |
+| **SECOP** | Transaccional con captcha, sin API documentada | Sesión autenticada + automatización con las reglas del portal respetadas |
+| **SAMAI** | Sólo expone expediente y documentos vía sesión web | Playwright con reintentos, backoff y clasificación de errores |
+| **Rama Judicial** | API JSON real, con tope de 1 000 registros | Pacer global y barrido geográfico para rodear el tope |
+| **Procuraduría** | Appian *low-code* con reCAPTCHA Enterprise | Dominio propio con puerto `ProveedorConsulta` intercambiable |
+| **Curaduría Urbana** | Resoluciones en PDF escaneado | Pipeline OCR con detección de la página resumen y saneado de alucinaciones |
 
-El resultado de esa investigación suele acabar en un **dataset de referencia**
-—como los 17 457 elementos de la tabla piramidal— o en una capa de abstracción
-que permite cambiar de proveedor sin reescribir el negocio.
+El resultado suele acabar en un **dataset de referencia** —como los 17 457
+elementos de la tabla piramidal— o en una capa de abstracción que permite
+cambiar de proveedor sin reescribir el negocio.
 
 </details>
 
 <details>
-<summary><b>🏗️ CodRamExc</b> · dataset y herramienta de los códigos de radicación de la Rama Judicial<br><i>2026 · Python · requests · openpyxl · PyInstaller</i></summary>
+<summary><b>🏗️ CodRamExc</b> · dataset y herramienta de los códigos de radicación de la Rama Judicial<br><i>🔬 Documentado · Python · requests · openpyxl · PyInstaller</i></summary>
 
 Extrae la **estructura jerárquica real** de los códigos que usa la Rama Judicial
 para construir el número de radicación, y la exporta como tabla piramidal
@@ -177,6 +193,8 @@ clasificada por ciudad.
 </details>
 
 ### 🏛️ Repositorios públicos
+
+*Código abierto: se puede leer, ejecutar y auditar.*
 
 <a id="repos"></a>
 
@@ -195,13 +213,15 @@ clasificada por ciudad.
 
 ### 🌍 Sitios y productos para clientes
 
+*Trabajo comercial entregado y en funcionamiento.*
+
 | Proyecto | En vivo | Qué hay detrás |
 |---|---|---|
 | **M&D Travels** | [mydtravels.com](https://mydtravels.com/) | Sitio + asistente de viajes con IA, blog desde RSS, PWA, reCAPTCHA y Resend |
 | **M&D Cotizaciones** *(escritorio)* | — | App **Electron** con navegador embebido, captura de ofertas en un clic, export a Excel y PDF con LaTeX, IA opcional y auto-actualización |
 | **DeleitArte** *(pastelería)* | [pasteleriadeleitarte.com](https://pasteleriadeleitarte.com/) | Catálogo, **armador de pasteles 3D**, pedido libre con foto, reserva de espacio multi-paso y PWA |
 | **JR Mantenimiento Eléctrico** | [jrmantenimientoelectrico.com](https://jrmantenimientoelectrico.com/) | Sitio corporativo con GSAP y Swiper, PWA, legal (Habeas Data) y SEO técnico |
-| **Beniet Perfumería** *(Dupé)* | [dupe-perfumes.vercel.app](https://dupe-perfumes.vercel.app/) | E-commerce editorial con React + Vite, **kiosco táctil con quiz** y PWA |
+| **Beniet Perfumería** *(Dupé)* | [duperfumes.vercel.app](https://duperfumes.vercel.app/) | E-commerce editorial con React + Vite, **kiosco táctil con quiz** y PWA |
 | **La Manuelina** *(web)* | — | Portal institucional con módulos de SECOP y Corte Constitucional, roles y PWA offline |
 
 ---
@@ -210,8 +230,10 @@ clasificada por ciudad.
 
 ## 🚧 En desarrollo
 
+*Proyecto propio, en construcción: lo que viene después.*
+
 <details>
-<summary><b>🏙️ SogNow</b> · plataforma cívica para rastrear los proyectos urbanos de Sogamoso<br><i>Proyecto propio · Python · FastAPI · PostgreSQL + PostGIS · Next.js · Leaflet</i></summary>
+<summary><b>🏙️ SogNow</b> · plataforma cívica para rastrear los proyectos urbanos de Sogamoso<br><i>🛠️ En construcción · proyecto propio · Python · FastAPI · PostgreSQL + PostGIS · Next.js · Leaflet</i></summary>
 
 Centraliza, rastrea y **visualiza los proyectos urbanos** (privados y públicos)
 de Sogamoso, hoy dispersos entre curaduría, secretaría, medios locales y redes
@@ -235,11 +257,22 @@ sociales.
   <img alt="Radar de habilidades: en producción y en investigación" src="assets/radar-dark.v6.svg" width="620">
 </picture>
 
+<sub>El radar **no** es una puntuación de prestigio: contrasta lo que ya está
+**aplicado en producción** contra lo que está **en investigación**. La evidencia
+de lo primero son los proyectos de arriba.</sub>
+
 <div align="center">
 
 <img alt="Stack tecnológico: TypeScript, JavaScript, React, Next.js, Node.js, Express, Python, Java, C, PostgreSQL, MySQL, Tailwind, Prisma, Electron, Docker, Git y GitHub" src="assets/stack.svg" width="720">
 
 </div>
+
+> 🤖 **IA aplicada, no experimentos de laboratorio.** Un recomendador que
+> degrada a un *fallback* local cuando el modelo no responde; un redactor que
+> **sólo redacta y jamás busca** (la búsqueda la hace una persona, con
+> criterio); y un pipeline OCR con detección de la página resumen y saneado de
+> alucinaciones sobre documentos escaneados. En los tres casos, la IA es una
+> pieza dentro de un sistema que tiene que funcionar sin ella.
 
 | Todo el portafolio (público + privado) | Solo repos públicos (medido por la API) |
 |---|---|
