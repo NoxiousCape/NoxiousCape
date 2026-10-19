@@ -181,7 +181,8 @@ def text(x: float, y: float, content: str, *, size: int = 14, weight: int = 400,
 
 def rect(x: float, y: float, w: float, h: float, *, fill: str = "none",
          stroke: str | None = None, rx: float = 0, ry: float | None = None,
-         stroke_width: float = 1, opacity: float | None = None) -> str:
+         stroke_width: float = 1, opacity: float | None = None,
+         cls: str | None = None) -> str:
     """Emite un ``<rect>``."""
     attrs = [f'x="{fmt(x)}"', f'y="{fmt(y)}"', f'width="{fmt(w)}"', f'height="{fmt(h)}"']
     attrs.append(f'rx="{fmt(rx)}"')
@@ -192,6 +193,8 @@ def rect(x: float, y: float, w: float, h: float, *, fill: str = "none",
         attrs.append(f'stroke-width="{fmt(stroke_width)}"')
     if opacity is not None:
         attrs.append(f'opacity="{fmt(opacity)}"')
+    if cls:
+        attrs.append(f'class="{cls}"')
     return f"<rect {' '.join(attrs)}/>"
 
 

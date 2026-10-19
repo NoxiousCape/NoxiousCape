@@ -3,9 +3,20 @@
 El contenido NO está en este archivo sino en ``assets/banner.json``, para que
 puedas editar el texto sin tocar Python.
 
+Animaciones (CSS embebido en el SVG, sin JavaScript):
+
+* **Máquina de escribir**: cada línea se revela de izquierda a derecha con un
+  recorte (``clipPath``) que se ensancha. Las líneas aparecen en cascada.
+* **Cursor parpadeante**: el bloque al final de la última línea.
+* **Brillo en la barra superior**: una franja de luz que la recorre.
+
+Todo está pensado para degradarse con elegancia: si el navegador no ejecuta
+las animaciones (o el saneador de GitHub las elimina), los SVG se ven
+**completos y estáticos**, nunca vacíos.
+
 Salida:
-    assets/banner-dark.svg
-    assets/banner-light.svg
+    assets/banner-dark.vN.svg
+    assets/banner-light.vN.svg
 
 Uso:
     python scripts/banner.py
@@ -30,6 +41,12 @@ PADDING_TOP = 58
 LINE_HEIGHT = 24
 TITLEBAR_HEIGHT = 38
 RADIUS = 12
+
+# Ritmo de la animación.
+TYPE_DURATION = 0.26   # segundos que tarda cada línea en "escribirse"
+TYPE_STAGGER = 0.13   # segundos entre el inicio de una línea y la siguiente
+CURSOR_BLINK = 1.1    # segundos por ciclo del cursor
+SHINE_DURATION = 9.0  # segundos que tarda el brillo en cruzar la barra
 
 # Colores por clase semántica del JSON.
 CLASS_COLORS = {
@@ -65,12 +82,19 @@ def build(theme) -> tuple[str, int]:
     height = PADDING_TOP + content_height + 22
 
     body: list[str] = []
+    style: list[str] = []
 
     # --- fondo y marco ----------------------------------------------------
     body.append(
         gradient(
             f"bar-{theme.name}",
             [(0.0, theme.accent, 1.0), (0.5, theme.accent2, 1.0), (1.0, theme.accent4, 1.0)],
+        )
+    )
+    body.append(
+        gradient(
+            f"shine-{theme.name}",
+            [(0.0, "#ffffff", 0.0), (0.5, "#ffffff", 0.5), (1.0, "#ffffff", 0.0)],
         )
     )
     body.append(rect(0, 0, WIDTH, height, fill=theme.bg, rx=RADIUS))
@@ -104,10 +128,20 @@ def build(theme) -> tuple[str, int]:
         )
     )
 
-    # Franja de acento superior
+    # --- franja de acento con brillo que la recorre ------------------------
     body.append(
-        f'<rect x="0" y="0" width="{WIDTH}" height="3" fill="url(#bar-{theme.name})" '
-        f'clip-path="url(#frame-{theme.name})"/>'
+        f'<g clip-path="url(#frame-{theme.name})">'
+        f'<rect x="0" y="0" width="{WIDTH}" height="3" fill="url(#bar-{theme.name})"/>'
+        f'<rect class="shine" x="0" y="0" width="220" height="3" '
+        f'fill="url(#shine-{theme.name})"/>'
+        f"</g>"
+    )
+    style.append(
+        f"@keyframes sweep-{theme.name} {{ from {{ transform: translateX(-220px); }} "
+        f"to {{ transform: translateX({WIDTH}px); }} }}"
+    )
+    style.append(
+        f".shine {{ animation: sweep-{theme.name} {SHINE_DURATION}s linear infinite; }}"
     )
 
     # --- líneas de la terminal --------------------------------------------
@@ -115,19 +149,21 @@ def build(theme) -> tuple[str, int]:
         y = PADDING_TOP + row * LINE_HEIGHT
         if not segments:
             continue
+
         column = 0
+        rendered: list[str] = []
         for segment in segments:
             content = segment.get("t", "")
             if not content:
                 continue
-            style = segment.get("c", "text")
-            fill = theme.color(CLASS_COLORS.get(style, "text"))
-            weight = 700 if style in BOLD_CLASSES else 400
+            style_name = segment.get("c", "text")
+            fill = theme.color(CLASS_COLORS.get(style_name, "text"))
+            weight = 700 if style_name in BOLD_CLASSES else 400
             for token in TOKEN_RE.findall(content):
                 if token.isspace():
                     column += len(token)
                     continue
-                body.append(
+                rendered.append(
                     text(
                         PADDING_X + column * char_width, y,
                         token, size=font_size, fill=fill, family=MONO, weight=weight,
@@ -135,7 +171,30 @@ def build(theme) -> tuple[str, int]:
                 )
                 column += len(token)
 
-    # Cursor parpadeante al final
+        # Ancho real de la línea: define hasta dónde "se escribe".
+        # El recorte arranca en x=0, así que hay que sumar el margen izquierdo
+        # para no cortar los últimos caracteres de la línea.
+        line_width = max(1.0, column * char_width)
+        clip_width = PADDING_X + line_width
+        delay = row * TYPE_STAGGER
+        clip_id = f"type-{theme.name}-{row}"
+
+        body.append(
+            f'<clipPath id="{clip_id}">'
+            f'<rect class="t-{theme.name}-{row}" x="0" y="{y - font_size}" '
+            f'width="{clip_width:.0f}" height="{font_size + 8}"/></clipPath>'
+        )
+        style.append(
+            f"@keyframes rev-{theme.name}-{row} {{ from {{ width: 0px; }} "
+            f"to {{ width: {clip_width:.0f}px; }} }}"
+        )
+        style.append(
+            f".t-{theme.name}-{row} {{ animation: rev-{theme.name}-{row} "
+            f"{TYPE_DURATION}s cubic-bezier(.4,0,.2,1) {delay:.2f}s backwards; }}"
+        )
+        body.append(f'<g clip-path="url(#{clip_id})">{"".join(rendered)}</g>')
+
+    # --- cursor parpadeante -------------------------------------------------
     last_row = len(lines) - 1
     while last_row >= 0 and not lines[last_row]:
         last_row -= 1
@@ -143,12 +202,23 @@ def build(theme) -> tuple[str, int]:
         column = sum(len(seg.get("t", "")) for seg in lines[last_row])
         body.append(
             rect(
-                PADDING_X + column * char_width, PADDING_TOP + last_row * LINE_HEIGHT - font_size + 3,
-                char_width * 0.6, font_size + 2, fill=theme.accent, opacity=0.85,
+                PADDING_X + column * char_width,
+                PADDING_TOP + last_row * LINE_HEIGHT - font_size + 3,
+                char_width * 0.6, font_size + 2,
+                fill=theme.accent, opacity=0.85, cls="cursor",
             )
         )
+        style.append(
+            "@keyframes blink { 0%, 49% { opacity: .85; } 50%, 100% { opacity: 0; } }"
+        )
+        style.append(
+            f".cursor {{ animation: blink {CURSOR_BLINK}s step-end infinite; }}"
+        )
 
-    return "".join(body), height
+    # --- estilos -------------------------------------------------------------
+    style_block = "<style>" + "".join(style) + "</style>"
+
+    return style_block + "".join(body), height
 
 
 def main() -> None:

@@ -1,0 +1,6 @@
+{
+  "icons": "ts,js,react,nextjs,nodejs,express,python,java,c,postgres,mysql,tailwind,prisma,electron,docker,git,github",
+  "perline": 9,
+  "theme": "original",
+  "output": "stack.svg"
+}
