@@ -21,14 +21,16 @@ concurrency:
 jobs:
   build:
     name: Generar SVG
-    runs-on: ubuntu-latest
+    # Fijado a 24.04 a propósito: la etiqueta `ubuntu-latest` migra a
+    # Ubuntu 26 y una imagen mayor cambiaría el Python disponible.
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
