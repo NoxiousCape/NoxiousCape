@@ -12,8 +12,11 @@ assets/
 ├── stats.json         # tarjetas de métricas
 ├── languages.json     # volumen de código por lenguaje
 ├── stack.json         # lista de iconos del stack técnico
-├── version.json       # versión de los assets (para romper la caché)
-└── state.json         # huellas del contenido de la última generación
+├── images.json        # manifiesto de las capturas de pantalla
+├── version.json       # versión de los SVG (para romper la caché)
+├── state.json         # huellas del contenido de la última generación SVG
+├── images-state.json  # huellas de la última generación de capturas
+└── shots/             # capturas optimizadas en WebP
 ```
 
 ## Regenerar
@@ -40,6 +43,52 @@ y GitHub no refrescaría la caché. Con `state.json` el caso se detecta igual.
 python scripts/generate.py --bump   # fuerza el cambio de versión
 ```
 
+## Las capturas de pantalla
+
+Las capturas se optimizan a **WebP**, que en interfaces con texto se ve
+indistinguible del original y ocupa **un 93 % menos**: las trece capturas
+originales suman 6,2 MB y las publicadas, 0,9 MB.
+
+```bash
+pip install -r requirements-dev.txt   # sólo hace falta Pillow
+python scripts/sync_images.py
+```
+
+El flujo es:
+
+1. Se suelta el PNG en `images/` — esa carpeta es el **buzón** y está en
+   `.gitignore`: no se publica.
+2. `assets/images.json` declara qué archivo va con qué proyecto y su texto
+   alternativo.
+3. `sync_images.py` recorta al ancho máximo, convierte a WebP, publica en
+   `assets/shots/<nombre>.v<N>.webp` y reescribe las referencias del README.
+4. La versión sube sólo si el contenido cambió, y los archivos de la versión
+   anterior se borran.
+
+> **Pillow es la única dependencia del repositorio** y sólo se usa aquí. Los
+> SVG del perfil —que regenera el workflow de GitHub Actions— siguen
+> funcionando con la biblioteca estándar, sin `pip install`.
+
+Cada archivo se sirve **una sola vez** aunque aparezca en dos sitios del
+README (la galería y la ficha del proyecto): es el mismo archivo, así que el
+navegador lo descarga una vez.
+
+### Añadir una captura nueva
+
+1. Copia el PNG a `images/`.
+2. Añádela a `assets/images.json` con su `source` y su `alt`.
+3. Ponle su sitio en el README: `assets/shots/<nombre>.v<N>.webp`.
+4. `python scripts/sync_images.py` se encarga del resto.
+
+### Herramientas de revisión
+
+| Script | Para qué |
+|---|---|
+| `scripts/contact_sheet.py` | Compone todas las capturas en una hoja de contactos para verlas de un vistazo |
+| `scripts/preview_section.py` | Renderiza una sección del README aislada, para revisar cómo queda |
+| `scripts/preview_animation.py` | Pausa la animación del banner en un instante concreto |
+
+
 ### El stack de iconos se descarga aparte
 
 `assets/stack.svg` viene de **skillicons.dev** (logotipos de simple-icons,
@@ -52,23 +101,6 @@ python scripts/fetch_stack.py
 
 La lista de iconos se edita en `assets/stack.json`. Este archivo **no** lleva
 versión en el nombre porque lo actualiza una persona, no el workflow.
-
-### Las capturas de pantalla
-
-`assets/abacre-error251.v1.png` es una captura real del proceso de debugging
-publicada en el repositorio abierto
-[`NoxiousCape/Abacre_Investigation`](https://github.com/NoxiousCape/Abacre_Investigation)
-(`Screenshots/debug/11_ollydbg_protection_error_251.png`). Se copia al perfil
-para no depender de una URL externa.
-
-Al añadir una captura nueva:
-
-* Nombre: `assets/<descripcion>.v<N>.png`, con `N` incrementado cuando cambie
-  el contenido, por el mismo motivo que los SVG.
-* En el README, referencia siempre a la versión vigente.
-* Las capturas de los proyectos privados las aporta el autor: son el único
-  punto del perfil donde todavía falta evidencia visual. Hay marcadores
-  `<!-- CAPTURA -->` en los tres proyectos destacados.
 
 ### Por qué el número de versión en el nombre del archivo
 
