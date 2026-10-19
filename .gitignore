@@ -3,9 +3,17 @@
 [0-9]*.md
 README.anterior.md
 
+# Las capturas originales que se sueltan en `images/`: son el *buzón* de
+# trabajo. Las que se publican en el README son las optimizadas y
+# versionadas de `assets/shots/`, generadas con scripts/sync_images.py.
+images/
+
 # --- Previews locales ---
 .preview*.html
 preview*.html
+section.html
+contact-sheet.png
+quality.png
 
 # --- Python ---
 __pycache__/
