@@ -66,6 +66,11 @@ así, lo que construí y por qué está a la vista.
 > Cada línea lleva una etiqueta de **madurez**: 🟢 en producción · 🔬 trabajo
 > documentado · 🛠️ en construcción.
 
+> 👤 **Contribución individual.** En los sistemas comerciales de este perfil
+> **diseñé la arquitectura, implementé el código y opero el despliegue**, de
+> principio a fin. Los proyectos académicos de la UPTC (`SIGBMS`) se
+> desarrollaron en equipo con dos compañeros.
+
 ### ⚖️ Plataformas judiciales y de contratación pública
 
 *Trabajo comercial, en producción con usuarios reales.*
@@ -154,7 +159,13 @@ detección** en dos pruebas de `virus.gr` (113 334 y 147 184 muestras).
 * 24 capturas de debugging, scripts Python reproducibles y hashes SHA-256 de cada artefacto
 * **Honestidad intelectual**: el README separa hechos de hipótesis y enumera lo que **no** se pudo verificar
 
-🔗 **[NoxiousCape/Abacre_Investigation](https://github.com/NoxiousCape/Abacre_Investigation)**
+<img alt="OllyDbg mostrando el error 251 de protección que dispara el packer al detectar el depurador" src="assets/abacre-error251.v1.png" width="860">
+
+*El packer detecta el depurador y aborta con `Error 251`. Con `NTSD -pv` el mismo
+proceso se volca completo: por eso el repositorio documenta los **dos** intentos
+y no sólo el que funcionó.*
+
+🔗 **[NoxiousCape/Abacre_Investigation](https://github.com/NoxiousCape/Abacre_Investigation)** — *el repositorio incluye las 24 capturas completas del proceso*
 
 </details>
 

@@ -53,6 +53,23 @@ python scripts/fetch_stack.py
 La lista de iconos se edita en `assets/stack.json`. Este archivo **no** lleva
 versión en el nombre porque lo actualiza una persona, no el workflow.
 
+### Las capturas de pantalla
+
+`assets/abacre-error251.v1.png` es una captura real del proceso de debugging
+publicada en el repositorio abierto
+[`NoxiousCape/Abacre_Investigation`](https://github.com/NoxiousCape/Abacre_Investigation)
+(`Screenshots/debug/11_ollydbg_protection_error_251.png`). Se copia al perfil
+para no depender de una URL externa.
+
+Al añadir una captura nueva:
+
+* Nombre: `assets/<descripcion>.v<N>.png`, con `N` incrementado cuando cambie
+  el contenido, por el mismo motivo que los SVG.
+* En el README, referencia siempre a la versión vigente.
+* Las capturas de los proyectos privados las aporta el autor: son el único
+  punto del perfil donde todavía falta evidencia visual. Hay marcadores
+  `<!-- CAPTURA -->` en los tres proyectos destacados.
+
 ### Por qué el número de versión en el nombre del archivo
 
 GitHub cachea los SVG embebidos en un README durante **semanas**. Si el
